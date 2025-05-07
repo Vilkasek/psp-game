@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/vilkas/projekty/psp-game/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

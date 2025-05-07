@@ -1,0 +1,3 @@
+/home/vilkas/projekty/psp-game/build/CMakeFiles/sdl2-image.dir
+/home/vilkas/projekty/psp-game/build/CMakeFiles/edit_cache.dir
+/home/vilkas/projekty/psp-game/build/CMakeFiles/rebuild_cache.dir
