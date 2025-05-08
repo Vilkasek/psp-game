@@ -151,6 +151,66 @@ CMakeFiles/sdl2-image.dir/player/player.cpp.obj: \
  /usr/local/pspdev/psp/include/SDL2/SDL_misc.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_image.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
+ /usr/local/pspdev/psp/include/SDL2/SDL_render.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_video.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/memory \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/memoryfwd.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/allocator.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++allocator.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/new_allocator.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/new \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/exception.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_tempbuf.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_construct.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_uninitialized.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/ext/alloc_traits.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/alloc_traits.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_raw_storage_iter.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/align.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/uses_allocator.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/unique_ptr.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/tuple \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/invoke.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_function.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/backward/binders.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/functional_hash.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/hash_bytes.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/shared_ptr.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/iosfwd \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stringfwd.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/postypes.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/cwchar \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/shared_ptr_base.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/typeinfo \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/allocated_ptr.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/refwrap.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/ext/aligned_buffer.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/ext/atomicity.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr-default.h \
+ /usr/local/pspdev/psp/include/pthread.h \
+ /usr/local/pspdev/psp/include/pte_types.h \
+ /usr/local/pspdev/psp/include/errno.h \
+ /usr/local/pspdev/psp/include/sys/errno.h \
+ /usr/local/pspdev/psp/include/sys/timeb.h \
+ /usr/local/pspdev/psp/include/sched.h \
+ /usr/local/pspdev/psp/include/bits/posix_opt.h \
+ /usr/local/pspdev/psp/include/sys/_pthreadtypes.h \
+ /usr/local/pspdev/psp/include/time.h \
+ /usr/local/pspdev/psp/include/machine/time.h \
+ /usr/local/pspdev/psp/include/setjmp.h \
+ /usr/local/pspdev/psp/include/machine/setjmp.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/atomic_word.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/ext/concurrence.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/exception \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/exception_ptr.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/cxxabi_init_exception.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/nested_exception.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/shared_ptr_atomic.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_base.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_lockfree_defines.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/backward/auto_ptr.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
  /home/vilkas/projekty/psp-game/player/../sprite/sprite.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_rect.h

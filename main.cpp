@@ -1,7 +1,10 @@
 #include "block/block.h"
+#include "map/map.h"
 #include "player/player.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_render.h>
+#include <iostream>
 
 SDL_Window *window = nullptr;
 SDL_Renderer *renderer = nullptr;
@@ -9,7 +12,7 @@ SDL_GameController *gameController = nullptr;
 
 bool initSDL();
 SDL_Window *createWindow(const char *title, int width, int height);
-bool gameLoop(Player &player, Block &block);
+bool gameLoop(Player &player, Map &map);
 void cleanSDL();
 
 int main(int argc, char *argv[]) {
@@ -28,11 +31,16 @@ int main(int argc, char *argv[]) {
   }
 
   Player player("grass.png", window);
-  Block block(10, 200, "grass.png", window);
+
+  SDL_Texture *map_texture = IMG_LoadTexture(renderer, "grass.png");
+
+  Map map(renderer, map_texture);
+  map.loadFromFile("maps/level1.txt");
+
   player.setPosition(480 / 2 - player.getWidth() / 2,
                      272 / 2 - player.getHeight() / 2);
 
-  if (!gameLoop(player, block)) {
+  if (!gameLoop(player, map)) {
     return -1;
   }
 
@@ -68,7 +76,7 @@ SDL_Window *createWindow(const char *title, int width, int height) {
   return window;
 }
 
-bool gameLoop(Player &player, Block &block) {
+bool gameLoop(Player &player, Map &map) {
   bool running = true;
   SDL_Event event;
 
@@ -76,6 +84,10 @@ bool gameLoop(Player &player, Block &block) {
   Uint32 currentTime;
 
   float deltaTime;
+
+  // Display number of blocks loaded
+  std::cout << "Game loop started with " << map.getBlocks().size()
+            << " blocks loaded" << std::endl;
 
   while (running) {
     currentTime = SDL_GetTicks();
@@ -97,23 +109,57 @@ bool gameLoop(Player &player, Block &block) {
           running = false;
         }
         break;
+      case SDL_KEYDOWN:
+        // Handle keyboard input for testing
+        if (event.key.keysym.sym == SDLK_ESCAPE) {
+          running = false;
+        }
+        break;
+      }
+    }
+
+    // Handle keyboard movement for testing if no controller available
+    const Uint8 *keyState = SDL_GetKeyboardState(NULL);
+    if (!gameController && keyState) {
+      // Simulate controller input with keyboard
+      if (keyState[SDL_SCANCODE_LEFT]) {
+        player.setPosition(player.getX() - 2, player.getY());
+      }
+      if (keyState[SDL_SCANCODE_RIGHT]) {
+        player.setPosition(player.getX() + 2, player.getY());
+      }
+      if (keyState[SDL_SCANCODE_UP]) {
+        player.setPosition(player.getX(), player.getY() - 2);
+      }
+      if (keyState[SDL_SCANCODE_DOWN]) {
+        player.setPosition(player.getX(), player.getY() + 2);
       }
     }
 
     if (gameController) {
-      player.move(gameController, deltaTime, block);
+      player.move(gameController, deltaTime);
     }
 
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    for (const Block &block : map.getBlocks()) {
+      player.checkCollision(block);
+    }
+
+    // Set background color to make blocks more visible
+    SDL_SetRenderDrawColor(renderer, 100, 100, 200,
+                           255); // Light blue background
     SDL_RenderClear(renderer);
-    block.render(renderer);
+
+    // Render the map first (so blocks appear behind the player)
+    map.render(renderer);
+
+    // Then render the player on top
     player.render(renderer);
+
     SDL_RenderPresent(renderer);
   }
 
   return true;
 }
-
 void cleanSDL() {
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);

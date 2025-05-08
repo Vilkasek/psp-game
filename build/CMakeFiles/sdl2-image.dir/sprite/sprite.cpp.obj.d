@@ -149,4 +149,5 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: \
  /usr/local/pspdev/psp/include/SDL2/SDL_misc.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_image.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
+ /usr/local/pspdev/psp/include/SDL2/SDL_render.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_video.h

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sdl2-image.dir/block/block.cpp.obj.d"
   "CMakeFiles/sdl2-image.dir/main.cpp.obj"
   "CMakeFiles/sdl2-image.dir/main.cpp.obj.d"
+  "CMakeFiles/sdl2-image.dir/map/map.cpp.obj"
+  "CMakeFiles/sdl2-image.dir/map/map.cpp.obj.d"
   "CMakeFiles/sdl2-image.dir/player/player.cpp.obj"
   "CMakeFiles/sdl2-image.dir/player/player.cpp.obj.d"
   "CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj"

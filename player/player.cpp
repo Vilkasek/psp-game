@@ -28,8 +28,31 @@ int Player::getWidth() const { return sprite.getWidth(); }
 
 int Player::getHeight() const { return sprite.getHeight(); }
 
-void Player::move(SDL_GameController *controller, float deltaTime,
-                  const Block &block) {
+void Player::checkCollision(const Block &block) {
+  SDL_Rect playerRect = getRect();
+  SDL_Rect blockRect = block.getRect();
+
+  if (SDL_HasIntersection(&playerRect, &blockRect)) {
+    if (velocityY > 0 &&
+        playerRect.y + playerRect.h <= blockRect.y + velocityY) {
+      y = blockRect.y - playerRect.h;
+      isOnGround = true;
+      velocityY = 0;
+    }
+
+    else if (velocityY < 0 &&
+             playerRect.y >= blockRect.y + blockRect.h + velocityY) {
+      y = blockRect.y + blockRect.h;
+      velocityY = 0;
+    }
+
+    else {
+      velocityX = 0;
+    }
+  }
+}
+
+void Player::move(SDL_GameController *controller, float deltaTime) {
   float prevVelocityX = velocityX;
   float prevVelocityY = velocityY;
 
@@ -91,24 +114,6 @@ void Player::move(SDL_GameController *controller, float deltaTime,
     isOnGround = true;
   } else {
     isOnGround = false;
-  }
-
-  SDL_Rect playerRect = getRect();
-  SDL_Rect blockRect = block.getRect();
-
-  if (SDL_HasIntersection(&playerRect, &blockRect)) {
-    if (velocityY > 0 &&
-        playerRect.y + playerRect.h <= blockRect.y + velocityY) {
-      y = blockRect.y - playerRect.h;
-      velocityY = 0;
-      isOnGround = true;
-    } else if (velocityY < 0 &&
-               playerRect.y >= blockRect.y + blockRect.h + velocityY) {
-      y = blockRect.y + blockRect.h;
-      velocityY = 0;
-    } else {
-      velocityX = 0;
-    }
   }
 
   sprite.setPosition(static_cast<int>(x), static_cast<int>(y));

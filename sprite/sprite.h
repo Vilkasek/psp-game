@@ -3,16 +3,18 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_render.h>
 #include <SDL2/SDL_video.h>
 
 class Sprite {
 public:
   Sprite(const char *filename, SDL_Window *window);
+  Sprite(SDL_Texture *texture);
   ~Sprite();
 
   void setPosition(int x, int y);
   void render(SDL_Renderer *renderer) const;
-  
+
   int getWidth() const;
   int getHeight() const;
 

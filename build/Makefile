@@ -177,6 +177,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+map/map.obj: map/map.cpp.obj
+.PHONY : map/map.obj
+
+# target to build an object file
+map/map.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/map/map.cpp.obj
+.PHONY : map/map.cpp.obj
+
+map/map.i: map/map.cpp.i
+.PHONY : map/map.i
+
+# target to preprocess a source file
+map/map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/map/map.cpp.i
+.PHONY : map/map.cpp.i
+
+map/map.s: map/map.cpp.s
+.PHONY : map/map.s
+
+# target to generate assembly for a file
+map/map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/map/map.cpp.s
+.PHONY : map/map.cpp.s
+
 player/player.obj: player/player.cpp.obj
 .PHONY : player/player.obj
 
@@ -240,6 +264,9 @@ help:
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... map/map.obj"
+	@echo "... map/map.i"
+	@echo "... map/map.s"
 	@echo "... player/player.obj"
 	@echo "... player/player.i"
 	@echo "... player/player.s"

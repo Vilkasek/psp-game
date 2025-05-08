@@ -1,8 +1,14 @@
 #include "sprite.h"
+#include <SDL2/SDL_render.h>
 
 Sprite::Sprite(const char *filename, SDL_Window *window)
     : filename(filename), window(window), renderer(SDL_GetRenderer(window)) {
   loadTexture();
+  SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
+  rect = {rect.x, rect.y, getWidth(), getHeight()};
+}
+Sprite::Sprite(SDL_Texture *texture) {
+  this->texture = texture;
   SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
   rect = {rect.x, rect.y, getWidth(), getHeight()};
 }

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.11)
 
 project(sdl2-image)
 
-add_executable(${PROJECT_NAME} main.cpp sprite/sprite.cpp player/player.cpp block/block.cpp)
+add_executable(${PROJECT_NAME} main.cpp sprite/sprite.cpp player/player.cpp block/block.cpp map/map.cpp)
 
 include(FindPkgConfig)
 pkg_search_module(SDL2 REQUIRED sdl2)

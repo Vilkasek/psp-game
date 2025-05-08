@@ -24,8 +24,8 @@ public:
 
   SDL_Rect getRect();
 
-  void move(SDL_GameController *controller, float deltaTime,
-            const Block &block);
+  void checkCollision(const Block &block);
+  void move(SDL_GameController *controller, float deltaTime);
 
 private:
   Sprite sprite;
