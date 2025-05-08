@@ -129,6 +129,30 @@ sdl2-image/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/build
 .PHONY : sdl2-image/fast
 
+block/block.obj: block/block.cpp.obj
+.PHONY : block/block.obj
+
+# target to build an object file
+block/block.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.obj
+.PHONY : block/block.cpp.obj
+
+block/block.i: block/block.cpp.i
+.PHONY : block/block.i
+
+# target to preprocess a source file
+block/block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.i
+.PHONY : block/block.cpp.i
+
+block/block.s: block/block.cpp.s
+.PHONY : block/block.s
+
+# target to generate assembly for a file
+block/block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.s
+.PHONY : block/block.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sdl2-image"
+	@echo "... block/block.obj"
+	@echo "... block/block.i"
+	@echo "... block/block.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

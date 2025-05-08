@@ -1,6 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "../block/block.h"
 #include "../sprite/sprite.h"
 #include <SDL2/SDL.h>
 
@@ -21,7 +22,10 @@ public:
   float getVelocityY() const;
   bool getIsOnGround() const;
 
-  void move(SDL_GameController *controller, float deltaTime);
+  SDL_Rect getRect();
+
+  void move(SDL_GameController *controller, float deltaTime,
+            const Block &block);
 
 private:
   Sprite sprite;

@@ -1,5 +1,5 @@
-CMakeFiles/sdl2-image.dir/main.cpp.obj: \
- /home/vilkas/projekty/psp-game/main.cpp \
+CMakeFiles/sdl2-image.dir/block/block.cpp.obj: \
+ /home/vilkas/projekty/psp-game/block/block.cpp \
  /home/vilkas/projekty/psp-game/block/block.h \
  /home/vilkas/projekty/psp-game/block/../sprite/sprite.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
@@ -150,6 +150,4 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: \
  /usr/local/pspdev/psp/include/SDL2/SDL_misc.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_image.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
- /usr/local/pspdev/psp/include/SDL2/SDL_video.h \
- /home/vilkas/projekty/psp-game/player/player.h \
- /home/vilkas/projekty/psp-game/player/../sprite/sprite.h
+ /usr/local/pspdev/psp/include/SDL2/SDL_video.h

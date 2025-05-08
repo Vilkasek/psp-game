@@ -4,6 +4,7 @@ Sprite::Sprite(const char *filename, SDL_Window *window)
     : filename(filename), window(window), renderer(SDL_GetRenderer(window)) {
   loadTexture();
   SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
+  rect = {rect.x, rect.y, getWidth(), getHeight()};
 }
 
 Sprite::~Sprite() { unloadTexture(); }
@@ -45,3 +46,5 @@ SDL_Texture *Sprite::loadTexture(const char *filename, SDL_Window *window) {
 
   return sprite;
 }
+
+SDL_Rect Sprite::getRect() { return rect; }

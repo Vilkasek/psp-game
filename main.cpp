@@ -1,9 +1,7 @@
+#include "block/block.h"
 #include "player/player.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include <SDL2/SDL_render.h>
-#include <SDL2/SDL_stdinc.h>
-#include <SDL2/SDL_timer.h>
 
 SDL_Window *window = nullptr;
 SDL_Renderer *renderer = nullptr;
@@ -11,7 +9,7 @@ SDL_GameController *gameController = nullptr;
 
 bool initSDL();
 SDL_Window *createWindow(const char *title, int width, int height);
-bool gameLoop(Player &player);
+bool gameLoop(Player &player, Block &block);
 void cleanSDL();
 
 int main(int argc, char *argv[]) {
@@ -30,10 +28,11 @@ int main(int argc, char *argv[]) {
   }
 
   Player player("grass.png", window);
+  Block block(10, 200, "grass.png", window);
   player.setPosition(480 / 2 - player.getWidth() / 2,
                      272 / 2 - player.getHeight() / 2);
 
-  if (!gameLoop(player)) {
+  if (!gameLoop(player, block)) {
     return -1;
   }
 
@@ -69,7 +68,7 @@ SDL_Window *createWindow(const char *title, int width, int height) {
   return window;
 }
 
-bool gameLoop(Player &player) {
+bool gameLoop(Player &player, Block &block) {
   bool running = true;
   SDL_Event event;
 
@@ -102,11 +101,12 @@ bool gameLoop(Player &player) {
     }
 
     if (gameController) {
-      player.move(gameController, deltaTime);
+      player.move(gameController, deltaTime, block);
     }
 
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderClear(renderer);
+    block.render(renderer);
     player.render(renderer);
     SDL_RenderPresent(renderer);
   }

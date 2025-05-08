@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/vilkas/projekty/psp-game/block/block.cpp" "CMakeFiles/sdl2-image.dir/block/block.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/block/block.cpp.obj.d"
   "/home/vilkas/projekty/psp-game/main.cpp" "CMakeFiles/sdl2-image.dir/main.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/main.cpp.obj.d"
   "/home/vilkas/projekty/psp-game/player/player.cpp" "CMakeFiles/sdl2-image.dir/player/player.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/player/player.cpp.obj.d"
   "/home/vilkas/projekty/psp-game/sprite/sprite.cpp" "CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj.d"

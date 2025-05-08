@@ -11,10 +11,12 @@ public:
   ~Sprite();
 
   void setPosition(int x, int y);
+  void render(SDL_Renderer *renderer) const;
+  
   int getWidth() const;
   int getHeight() const;
 
-  void render(SDL_Renderer *renderer) const;
+  SDL_Rect getRect();
 
 private:
   SDL_Texture *texture = nullptr;
