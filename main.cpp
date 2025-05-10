@@ -30,15 +30,17 @@ int main(int argc, char *argv[]) {
     return -1;
   }
 
-  Player player("grass.png", window);
+  SDL_RenderSetVSync(renderer, 1);
+
+  Player player("player.png", window);
 
   SDL_Texture *map_texture = IMG_LoadTexture(renderer, "grass.png");
 
   Map map(renderer, map_texture);
   map.loadFromFile("maps/level1.txt");
 
-  player.setPosition(480 / 2 - player.getWidth() / 2,
-                     272 / 2 - player.getHeight() / 2);
+  player.setPosition(static_cast<int>(map.getPlayerMapX()),
+                     static_cast<int>(map.getPlayerMapY()));
 
   if (!gameLoop(player, map)) {
     return -1;
@@ -89,10 +91,18 @@ bool gameLoop(Player &player, Map &map) {
   std::cout << "Game loop started with " << map.getBlocks().size()
             << " blocks loaded" << std::endl;
 
+  // Ogranicz maksymalny deltaTime aby uniknąć problemów przy dużym lagu
+  const float MAX_DELTA_TIME = 0.05f; // maksymalnie 50ms
+
   while (running) {
     currentTime = SDL_GetTicks();
 
     deltaTime = (currentTime - lastTime) / 1000.f;
+
+    // Ogranicz maksymalny deltaTime
+    if (deltaTime > MAX_DELTA_TIME) {
+      deltaTime = MAX_DELTA_TIME;
+    }
 
     lastTime = currentTime;
 
@@ -102,7 +112,15 @@ bool gameLoop(Player &player, Map &map) {
         running = false;
         break;
       case SDL_CONTROLLERDEVICEADDED:
-        SDL_GameControllerOpen(event.cdevice.which);
+        gameController = SDL_GameControllerOpen(event.cdevice.which);
+        break;
+      case SDL_CONTROLLERDEVICEREMOVED:
+        if (gameController &&
+            SDL_JoystickInstanceID(SDL_GameControllerGetJoystick(
+                gameController)) == event.cdevice.which) {
+          SDL_GameControllerClose(gameController);
+          gameController = nullptr;
+        }
         break;
       case SDL_CONTROLLERBUTTONDOWN:
         if (event.cbutton.button == SDL_CONTROLLER_BUTTON_START) {
@@ -118,28 +136,13 @@ bool gameLoop(Player &player, Map &map) {
       }
     }
 
-    // Handle keyboard movement for testing if no controller available
-    const Uint8 *keyState = SDL_GetKeyboardState(NULL);
-    if (!gameController && keyState) {
-      // Simulate controller input with keyboard
-      if (keyState[SDL_SCANCODE_LEFT]) {
-        player.setPosition(player.getX() - 2, player.getY());
-      }
-      if (keyState[SDL_SCANCODE_RIGHT]) {
-        player.setPosition(player.getX() + 2, player.getY());
-      }
-      if (keyState[SDL_SCANCODE_UP]) {
-        player.setPosition(player.getX(), player.getY() - 2);
-      }
-      if (keyState[SDL_SCANCODE_DOWN]) {
-        player.setPosition(player.getX(), player.getY() + 2);
-      }
-    }
+    // Aktualizacja pozycji gracza
+    player.move(gameController, deltaTime);
 
-    if (gameController) {
-      player.move(gameController, deltaTime);
-    }
+    // Resetujemy flagę isOnGround przed sprawdzeniem kolizji
+    player.resetGroundState();
 
+    // Sprawdź kolizje po ruchu gracza
     for (const Block &block : map.getBlocks()) {
       player.checkCollision(block);
     }
@@ -156,11 +159,20 @@ bool gameLoop(Player &player, Map &map) {
     player.render(renderer);
 
     SDL_RenderPresent(renderer);
+
+    // Dodaj małe opóźnienie aby oszczędzić CPU
+    SDL_Delay(1);
   }
 
   return true;
 }
+
 void cleanSDL() {
+  if (gameController) {
+    SDL_GameControllerClose(gameController);
+    gameController = nullptr;
+  }
+
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
   IMG_Quit();

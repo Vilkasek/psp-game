@@ -24,6 +24,10 @@ void Map::loadFromFile(const char *filename) {
         std::cout << "Added block at position: " << col * 16 << ", " << row * 16
                   << std::endl;
       }
+      if (line[col] == 'p') {
+        playerMapX = col * 16;
+        playerMapY = row * 16;
+      }
     }
     row++;
   }
@@ -37,5 +41,9 @@ void Map::render(SDL_Renderer *renderer) {
     block.render(renderer);
   }
 }
+
+float Map::getPlayerMapX() { return playerMapX; }
+
+float Map::getPlayerMapY() { return playerMapY; }
 
 const std::vector<Block> &Map::getBlocks() const { return blocks; }
