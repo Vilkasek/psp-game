@@ -524,6 +524,8 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj
  /home/vilkas/projekty/psp-game/main.cpp
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/block/block.h
+ /home/vilkas/projekty/psp-game/player/player.h
+ /home/vilkas/projekty/psp-game/level_manager/level_manager.h
  /home/vilkas/projekty/psp-game/map/map.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/player/player.h

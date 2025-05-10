@@ -211,7 +211,8 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/backward/auto_ptr.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
- /home/vilkas/projekty/psp-game/map/map.h \
+ /home/vilkas/projekty/psp-game/level_manager/level_manager.h \
+ /home/vilkas/projekty/psp-game/level_manager/../map/map.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/vector \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_vector.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/initializer_list \
@@ -221,10 +222,8 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/memory_resource.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/cstddef \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/uses_allocator_args.h \
- /home/vilkas/projekty/psp-game/player/player.h \
- /home/vilkas/projekty/psp-game/player/../sprite/sprite.h \
- /home/vilkas/projekty/psp-game/level_manager/level_manager.h \
  /home/vilkas/projekty/psp-game/level_manager/../player/player.h \
+ /home/vilkas/projekty/psp-game/level_manager/../player/../sprite/sprite.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/string \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/char_traits.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/localefwd.h \
@@ -242,6 +241,7 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/cerrno \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/charconv.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.tcc \
+ /home/vilkas/projekty/psp-game/player/player.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/iostream \
  /usr/local/pspdev/psp/include/c++/14.1.0/ostream \
  /usr/local/pspdev/psp/include/c++/14.1.0/ios \

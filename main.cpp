@@ -1,7 +1,7 @@
 #include "block/block.h"
+#include "level_manager/level_manager.h"
 #include "map/map.h"
 #include "player/player.h"
-#include "level_manager/level_manager.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_render.h>
@@ -39,29 +39,33 @@ int main(int argc, char *argv[]) {
   Player player("player.png", window);
 
   SDL_Texture *blockTexture = IMG_LoadTexture(renderer, "grass.png");
-  SDL_Texture *exitTexture = IMG_LoadTexture(renderer, "exit.png");  // Załaduj teksturę wyjścia
-  
+  SDL_Texture *exitTexture =
+      IMG_LoadTexture(renderer, "grass.png"); // Załaduj teksturę wyjścia
+
   if (!blockTexture) {
-    std::cerr << "Failed to load block texture: " << SDL_GetError() << std::endl;
+    std::cerr << "Failed to load block texture: " << SDL_GetError()
+              << std::endl;
     return -1;
   }
-  
-  // Jeśli tekstura wyjścia nie istnieje, użyjemy domyślnego zielonego prostokąta
+
+  // Jeśli tekstura wyjścia nie istnieje, użyjemy domyślnego zielonego
+  // prostokąta
   if (!exitTexture) {
-    std::cerr << "Failed to load exit texture, using default: " << SDL_GetError() << std::endl;
+    std::cerr << "Failed to load exit texture, using default: "
+              << SDL_GetError() << std::endl;
   }
 
   Map map(renderer, blockTexture);
   map.setExitTexture(exitTexture);
-  
+
   LevelManager levelManager(renderer, blockTexture);
   levelManager.setExitTexture(exitTexture);
-  
+
   if (!levelManager.initialize("maps/")) {
     std::cerr << "Failed to initialize level manager" << std::endl;
     return -1;
   }
-  
+
   if (!levelManager.loadLevel(1, player, map)) {
     std::cerr << "Failed to load initial level" << std::endl;
     return -1;
@@ -76,7 +80,7 @@ int main(int argc, char *argv[]) {
   if (exitTexture) {
     SDL_DestroyTexture(exitTexture);
   }
-  
+
   cleanSDL();
   return 0;
 }
@@ -140,7 +144,8 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
 
   // Display number of blocks loaded
   std::cout << "Game loop started with " << map.getBlocks().size()
-            << " blocks loaded on level " << levelManager.getCurrentLevel() << std::endl;
+            << " blocks loaded on level " << levelManager.getCurrentLevel()
+            << std::endl;
 
   // Ogranicz maksymalny deltaTime aby uniknąć problemów przy dużym lagu
   const float MAX_DELTA_TIME = 0.05f; // maksymalnie 50ms
@@ -183,11 +188,13 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
         if (event.key.keysym.sym == SDLK_ESCAPE) {
           running = false;
         }
-        // Dodaj możliwość przejścia do następnego poziomu za pomocą klawisza N (do testów)
+        // Dodaj możliwość przejścia do następnego poziomu za pomocą klawisza N
+        // (do testów)
         else if (event.key.keysym.sym == SDLK_n) {
           if (!levelManager.goToNextLevel(player, map)) {
             if (levelManager.isGameCompleted()) {
-              std::cout << "You've completed all levels! Game over." << std::endl;
+              std::cout << "You've completed all levels! Game over."
+                        << std::endl;
               running = false;
             }
           }
@@ -206,20 +213,22 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
     for (const Block &block : map.getBlocks()) {
       player.checkCollision(block);
     }
-    
+
     // Sprawdź kolizję z wyjściem
     if (map.hasExit() && map.checkExitCollision(player.getRect())) {
       // Przejście do następnego poziomu
       if (!levelManager.goToNextLevel(player, map)) {
         if (levelManager.isGameCompleted()) {
-          std::cout << "Congratulations! You completed all levels!" << std::endl;
+          std::cout << "Congratulations! You completed all levels!"
+                    << std::endl;
           running = false; // Koniec gry
         }
       }
     }
 
     // Set background color
-    SDL_SetRenderDrawColor(renderer, 100, 100, 200, 255); // Light blue background
+    SDL_SetRenderDrawColor(renderer, 100, 100, 200,
+                           255); // Light blue background
     SDL_RenderClear(renderer);
 
     // Render the map first (so blocks appear behind the player)
@@ -227,8 +236,9 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
 
     // Then render the player on top
     player.render(renderer);
-    
-    // Wyświetl informację o aktualnym poziomie (w konsoli, ale można dodać renderowanie tekstu)
+
+    // Wyświetl informację o aktualnym poziomie (w konsoli, ale można dodać
+    // renderowanie tekstu)
     static int lastRenderedLevel = 0;
     if (lastRenderedLevel != levelManager.getCurrentLevel()) {
       lastRenderedLevel = levelManager.getCurrentLevel();

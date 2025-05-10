@@ -3,16 +3,16 @@
 #include <iostream>
 
 Map::Map(SDL_Renderer *renderer, SDL_Texture *blockTexture)
-    : renderer(renderer), 
-      texture(blockTexture), 
-      exitTexture(nullptr),
+    : renderer(renderer), texture(blockTexture), exitTexture(nullptr),
       exitExists(false) {}
 
-void Map::setExitTexture(SDL_Texture* texture) {
-    exitTexture = texture;
-}
+void Map::setExitTexture(SDL_Texture *texture) { exitTexture = texture; }
+float Map::getPlayerMapX() { return playerMapX; }
 
-// Zmodyfikuj metodę loadFromFile aby obsługiwała wyjścia ('E')
+float Map::getPlayerMapY() { return playerMapY; }
+
+const std::vector<Block> &Map::getBlocks() const { return blocks; }
+
 void Map::loadFromFile(const char *filename) {
   blocks.clear();
   exitExists = false; // Resetujemy stan wyjścia przy ładowaniu nowej mapy
@@ -60,7 +60,7 @@ void Map::render(SDL_Renderer *renderer) {
   for (auto &block : blocks) {
     block.render(renderer);
   }
-  
+
   // Renderuj wyjście
   if (exitExists) {
     if (exitTexture) {
@@ -68,9 +68,10 @@ void Map::render(SDL_Renderer *renderer) {
       SDL_RenderCopy(renderer, exitTexture, NULL, &exitRect);
     } else {
       // Fallback do prostokąta, jeśli tekstura nie jest dostępna
-      SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // Zielony kolor dla wyjścia
+      SDL_SetRenderDrawColor(renderer, 0, 255, 0,
+                             255); // Zielony kolor dla wyjścia
       SDL_RenderFillRect(renderer, &exitRect);
-      
+
       // Dodaj obramowanie dla lepszej widoczności
       SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
       SDL_RenderDrawRect(renderer, &exitRect);
