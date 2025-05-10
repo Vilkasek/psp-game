@@ -153,6 +153,30 @@ block/block.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.s
 .PHONY : block/block.cpp.s
 
+level_manager/level_manager.obj: level_manager/level_manager.cpp.obj
+.PHONY : level_manager/level_manager.obj
+
+# target to build an object file
+level_manager/level_manager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj
+.PHONY : level_manager/level_manager.cpp.obj
+
+level_manager/level_manager.i: level_manager/level_manager.cpp.i
+.PHONY : level_manager/level_manager.i
+
+# target to preprocess a source file
+level_manager/level_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.i
+.PHONY : level_manager/level_manager.cpp.i
+
+level_manager/level_manager.s: level_manager/level_manager.cpp.s
+.PHONY : level_manager/level_manager.s
+
+# target to generate assembly for a file
+level_manager/level_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.s
+.PHONY : level_manager/level_manager.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -261,6 +285,9 @@ help:
 	@echo "... block/block.obj"
 	@echo "... block/block.i"
 	@echo "... block/block.s"
+	@echo "... level_manager/level_manager.obj"
+	@echo "... level_manager/level_manager.i"
+	@echo "... level_manager/level_manager.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

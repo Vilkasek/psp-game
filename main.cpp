@@ -1,6 +1,7 @@
 #include "block/block.h"
 #include "map/map.h"
 #include "player/player.h"
+#include "level_manager/level_manager.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_render.h>
@@ -10,9 +11,12 @@ SDL_Window *window = nullptr;
 SDL_Renderer *renderer = nullptr;
 SDL_GameController *gameController = nullptr;
 
+int currentLevel = 1;
+const int MAX_LEVELS = 2;
+
 bool initSDL();
 SDL_Window *createWindow(const char *title, int width, int height);
-bool gameLoop(Player &player, Map &map);
+bool gameLoop(Player &player, Map &map, LevelManager &levelManager);
 void cleanSDL();
 
 int main(int argc, char *argv[]) {
@@ -20,7 +24,7 @@ int main(int argc, char *argv[]) {
     return -1;
   }
 
-  window = createWindow("window", 480, 272);
+  window = createWindow("Platform Game", 480, 272);
   if (window == nullptr) {
     return -1;
   }
@@ -34,20 +38,67 @@ int main(int argc, char *argv[]) {
 
   Player player("player.png", window);
 
-  SDL_Texture *map_texture = IMG_LoadTexture(renderer, "grass.png");
+  SDL_Texture *blockTexture = IMG_LoadTexture(renderer, "grass.png");
+  SDL_Texture *exitTexture = IMG_LoadTexture(renderer, "exit.png");  // Załaduj teksturę wyjścia
+  
+  if (!blockTexture) {
+    std::cerr << "Failed to load block texture: " << SDL_GetError() << std::endl;
+    return -1;
+  }
+  
+  // Jeśli tekstura wyjścia nie istnieje, użyjemy domyślnego zielonego prostokąta
+  if (!exitTexture) {
+    std::cerr << "Failed to load exit texture, using default: " << SDL_GetError() << std::endl;
+  }
 
-  Map map(renderer, map_texture);
-  map.loadFromFile("maps/level1.txt");
-
-  player.setPosition(static_cast<int>(map.getPlayerMapX()),
-                     static_cast<int>(map.getPlayerMapY()));
-
-  if (!gameLoop(player, map)) {
+  Map map(renderer, blockTexture);
+  map.setExitTexture(exitTexture);
+  
+  LevelManager levelManager(renderer, blockTexture);
+  levelManager.setExitTexture(exitTexture);
+  
+  if (!levelManager.initialize("maps/")) {
+    std::cerr << "Failed to initialize level manager" << std::endl;
+    return -1;
+  }
+  
+  if (!levelManager.loadLevel(1, player, map)) {
+    std::cerr << "Failed to load initial level" << std::endl;
     return -1;
   }
 
+  if (!gameLoop(player, map, levelManager)) {
+    return -1;
+  }
+
+  // Zwolnij tekstury przed wyjściem
+  SDL_DestroyTexture(blockTexture);
+  if (exitTexture) {
+    SDL_DestroyTexture(exitTexture);
+  }
+  
   cleanSDL();
   return 0;
+}
+
+bool loadLevel(Player &player, Map &map, int levelNum) {
+  char levelFile[100];
+  sprintf(levelFile, "maps/level%d.txt", levelNum);
+
+  // Sprawdź, czy plik istnieje
+  FILE *file = fopen(levelFile, "r");
+  if (!file) {
+    std::cerr << "Level file does not exist: " << levelFile << std::endl;
+    return false;
+  }
+  fclose(file);
+
+  map.loadFromFile(levelFile);
+  player.setPosition(static_cast<int>(map.getPlayerMapX()),
+                     static_cast<int>(map.getPlayerMapY()));
+
+  std::cout << "Loaded level " << levelNum << std::endl;
+  return true;
 }
 
 bool initSDL() {
@@ -78,7 +129,7 @@ SDL_Window *createWindow(const char *title, int width, int height) {
   return window;
 }
 
-bool gameLoop(Player &player, Map &map) {
+bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
   bool running = true;
   SDL_Event event;
 
@@ -89,7 +140,7 @@ bool gameLoop(Player &player, Map &map) {
 
   // Display number of blocks loaded
   std::cout << "Game loop started with " << map.getBlocks().size()
-            << " blocks loaded" << std::endl;
+            << " blocks loaded on level " << levelManager.getCurrentLevel() << std::endl;
 
   // Ogranicz maksymalny deltaTime aby uniknąć problemów przy dużym lagu
   const float MAX_DELTA_TIME = 0.05f; // maksymalnie 50ms
@@ -132,6 +183,15 @@ bool gameLoop(Player &player, Map &map) {
         if (event.key.keysym.sym == SDLK_ESCAPE) {
           running = false;
         }
+        // Dodaj możliwość przejścia do następnego poziomu za pomocą klawisza N (do testów)
+        else if (event.key.keysym.sym == SDLK_n) {
+          if (!levelManager.goToNextLevel(player, map)) {
+            if (levelManager.isGameCompleted()) {
+              std::cout << "You've completed all levels! Game over." << std::endl;
+              running = false;
+            }
+          }
+        }
         break;
       }
     }
@@ -146,10 +206,20 @@ bool gameLoop(Player &player, Map &map) {
     for (const Block &block : map.getBlocks()) {
       player.checkCollision(block);
     }
+    
+    // Sprawdź kolizję z wyjściem
+    if (map.hasExit() && map.checkExitCollision(player.getRect())) {
+      // Przejście do następnego poziomu
+      if (!levelManager.goToNextLevel(player, map)) {
+        if (levelManager.isGameCompleted()) {
+          std::cout << "Congratulations! You completed all levels!" << std::endl;
+          running = false; // Koniec gry
+        }
+      }
+    }
 
-    // Set background color to make blocks more visible
-    SDL_SetRenderDrawColor(renderer, 100, 100, 200,
-                           255); // Light blue background
+    // Set background color
+    SDL_SetRenderDrawColor(renderer, 100, 100, 200, 255); // Light blue background
     SDL_RenderClear(renderer);
 
     // Render the map first (so blocks appear behind the player)
@@ -157,6 +227,13 @@ bool gameLoop(Player &player, Map &map) {
 
     // Then render the player on top
     player.render(renderer);
+    
+    // Wyświetl informację o aktualnym poziomie (w konsoli, ale można dodać renderowanie tekstu)
+    static int lastRenderedLevel = 0;
+    if (lastRenderedLevel != levelManager.getCurrentLevel()) {
+      lastRenderedLevel = levelManager.getCurrentLevel();
+      std::cout << "Current level: " << lastRenderedLevel << std::endl;
+    }
 
     SDL_RenderPresent(renderer);
 
@@ -166,7 +243,6 @@ bool gameLoop(Player &player, Map &map) {
 
   return true;
 }
-
 void cleanSDL() {
   if (gameController) {
     SDL_GameControllerClose(gameController);

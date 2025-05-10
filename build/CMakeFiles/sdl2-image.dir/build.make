@@ -142,13 +142,28 @@ CMakeFiles/sdl2-image.dir/map/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sdl2-image.dir/map/map.cpp.s"
 	/usr/local/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vilkas/projekty/psp-game/map/map.cpp -o CMakeFiles/sdl2-image.dir/map/map.cpp.s
 
+CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj: CMakeFiles/sdl2-image.dir/flags.make
+CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj: /home/vilkas/projekty/psp-game/level_manager/level_manager.cpp
+CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj: CMakeFiles/sdl2-image.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vilkas/projekty/psp-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj"
+	/usr/local/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj -MF CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj.d -o CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj -c /home/vilkas/projekty/psp-game/level_manager/level_manager.cpp
+
+CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.i"
+	/usr/local/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vilkas/projekty/psp-game/level_manager/level_manager.cpp > CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.i
+
+CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.s"
+	/usr/local/pspdev/bin/psp-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vilkas/projekty/psp-game/level_manager/level_manager.cpp -o CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.s
+
 # Object files for target sdl2-image
 sdl2__image_OBJECTS = \
 "CMakeFiles/sdl2-image.dir/main.cpp.obj" \
 "CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj" \
 "CMakeFiles/sdl2-image.dir/player/player.cpp.obj" \
 "CMakeFiles/sdl2-image.dir/block/block.cpp.obj" \
-"CMakeFiles/sdl2-image.dir/map/map.cpp.obj"
+"CMakeFiles/sdl2-image.dir/map/map.cpp.obj" \
+"CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj"
 
 # External object files for target sdl2-image
 sdl2__image_EXTERNAL_OBJECTS =
@@ -158,9 +173,10 @@ sdl2-image: CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj
 sdl2-image: CMakeFiles/sdl2-image.dir/player/player.cpp.obj
 sdl2-image: CMakeFiles/sdl2-image.dir/block/block.cpp.obj
 sdl2-image: CMakeFiles/sdl2-image.dir/map/map.cpp.obj
+sdl2-image: CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj
 sdl2-image: CMakeFiles/sdl2-image.dir/build.make
 sdl2-image: CMakeFiles/sdl2-image.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vilkas/projekty/psp-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sdl2-image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vilkas/projekty/psp-game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable sdl2-image"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sdl2-image.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -E cmake_echo_color --cyan Not\ stripping\ binary\ for\ target\ sdl2-image,\ build\ type\ is\ .
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Calling psp-fixup-imports for target sdl2-image"
