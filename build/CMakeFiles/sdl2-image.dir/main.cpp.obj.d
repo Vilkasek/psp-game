@@ -211,6 +211,7 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/backward/auto_ptr.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
+ /home/vilkas/projekty/psp-game/camera/camera.h \
  /home/vilkas/projekty/psp-game/level_manager/level_manager.h \
  /home/vilkas/projekty/psp-game/level_manager/../map/map.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/vector \

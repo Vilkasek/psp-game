@@ -212,6 +212,7 @@ CMakeFiles/sdl2-image.dir/player/player.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/backward/auto_ptr.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
+ /home/vilkas/projekty/psp-game/player/../camera/camera.h \
  /home/vilkas/projekty/psp-game/player/../sprite/sprite.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_rect.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/iostream \

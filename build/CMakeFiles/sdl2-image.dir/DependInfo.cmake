@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vilkas/projekty/psp-game/block/block.cpp" "CMakeFiles/sdl2-image.dir/block/block.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/block/block.cpp.obj.d"
+  "/home/vilkas/projekty/psp-game/camera/camera.cpp" "CMakeFiles/sdl2-image.dir/camera/camera.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/camera/camera.cpp.obj.d"
   "/home/vilkas/projekty/psp-game/level_manager/level_manager.cpp" "CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj.d"
   "/home/vilkas/projekty/psp-game/main.cpp" "CMakeFiles/sdl2-image.dir/main.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/main.cpp.obj.d"
   "/home/vilkas/projekty/psp-game/map/map.cpp" "CMakeFiles/sdl2-image.dir/map/map.cpp.obj" "gcc" "CMakeFiles/sdl2-image.dir/map/map.cpp.obj.d"

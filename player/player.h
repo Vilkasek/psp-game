@@ -29,8 +29,8 @@ public:
 
   void checkCollision(const Block &block);
 
-  void move(SDL_GameController *controller, float deltaTime, int worldWidth,
-            int worldHeight);
+  void move(SDL_GameController *controller, float deltaTime,
+            int worldWidth = 480, int worldHeight = 272);
 
   void updateTimers(float deltaTime);
 

@@ -1,4 +1,5 @@
 #include "block/block.h"
+#include "camera/camera.h"
 #include "level_manager/level_manager.h"
 #include "map/map.h"
 #include "player/player.h"
@@ -12,6 +13,8 @@ SDL_GameController *gameController = nullptr;
 
 int currentLevel = 1;
 const int MAX_LEVELS = 2;
+const int SCREEN_WIDTH = 480;
+const int SCREEN_HEIGHT = 272;
 
 bool initSDL();
 SDL_Window *createWindow(const char *title, int width, int height);
@@ -23,7 +26,7 @@ int main(int argc, char *argv[]) {
     return -1;
   }
 
-  window = createWindow("Platform Game", 480, 272);
+  window = createWindow("Platform Game", SCREEN_WIDTH, SCREEN_HEIGHT);
   if (window == nullptr) {
     return -1;
   }
@@ -114,6 +117,11 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
 
   const float MAX_DELTA_TIME = 0.05f;
 
+  // Create a camera with screen dimensions and world dimensions
+  Camera camera(SCREEN_WIDTH, SCREEN_HEIGHT, map.getWorldWidth(),
+                map.getWorldHeight());
+  camera.setSmoothingFactor(0.1f);
+
   while (running) {
     currentTime = SDL_GetTicks();
 
@@ -155,12 +163,16 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
               running = false;
             }
           }
+          // Update camera bounds when changing levels
+          camera.setBounds(map.getWorldWidth(), map.getWorldHeight());
         }
         break;
       }
     }
 
-    player.move(gameController, deltaTime);
+    // Move player with world boundaries
+    player.move(gameController, deltaTime, map.getWorldWidth(),
+                map.getWorldHeight());
 
     player.resetGroundState();
 
@@ -168,20 +180,29 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
       player.checkCollision(block);
     }
 
+    // Update camera position to follow player
+    camera.update(static_cast<int>(player.getX() + player.getWidth() / 2),
+                  static_cast<int>(player.getY() + player.getHeight() / 2),
+                  deltaTime);
+
     if (map.hasExit() && map.checkExitCollision(player.getRect())) {
       if (!levelManager.goToNextLevel(player, map)) {
         if (levelManager.isGameCompleted()) {
           running = false;
         }
       }
+      // Update camera bounds when changing levels
+      camera.setBounds(map.getWorldWidth(), map.getWorldHeight());
     }
 
     SDL_SetRenderDrawColor(renderer, 100, 100, 200, 255);
     SDL_RenderClear(renderer);
 
-    map.render(renderer);
+    // Render map with camera
+    map.render(renderer, &camera);
 
-    player.render(renderer);
+    // Render player with camera
+    player.render(renderer, &camera);
 
     static int lastRenderedLevel = 0;
     if (lastRenderedLevel != levelManager.getCurrentLevel()) {
@@ -195,6 +216,7 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
 
   return true;
 }
+
 void cleanSDL() {
   if (gameController) {
     SDL_GameControllerClose(gameController);

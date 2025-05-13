@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sdl2-image.dir/block/block.cpp.obj"
   "CMakeFiles/sdl2-image.dir/block/block.cpp.obj.d"
+  "CMakeFiles/sdl2-image.dir/camera/camera.cpp.obj"
+  "CMakeFiles/sdl2-image.dir/camera/camera.cpp.obj.d"
   "CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj"
   "CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj.d"
   "CMakeFiles/sdl2-image.dir/main.cpp.obj"

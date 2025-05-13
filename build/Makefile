@@ -153,6 +153,30 @@ block/block.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.s
 .PHONY : block/block.cpp.s
 
+camera/camera.obj: camera/camera.cpp.obj
+.PHONY : camera/camera.obj
+
+# target to build an object file
+camera/camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/camera/camera.cpp.obj
+.PHONY : camera/camera.cpp.obj
+
+camera/camera.i: camera/camera.cpp.i
+.PHONY : camera/camera.i
+
+# target to preprocess a source file
+camera/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/camera/camera.cpp.i
+.PHONY : camera/camera.cpp.i
+
+camera/camera.s: camera/camera.cpp.s
+.PHONY : camera/camera.s
+
+# target to generate assembly for a file
+camera/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/camera/camera.cpp.s
+.PHONY : camera/camera.cpp.s
+
 level_manager/level_manager.obj: level_manager/level_manager.cpp.obj
 .PHONY : level_manager/level_manager.obj
 
@@ -285,6 +309,9 @@ help:
 	@echo "... block/block.obj"
 	@echo "... block/block.i"
 	@echo "... block/block.s"
+	@echo "... camera/camera.obj"
+	@echo "... camera/camera.i"
+	@echo "... camera/camera.s"
 	@echo "... level_manager/level_manager.obj"
 	@echo "... level_manager/level_manager.i"
 	@echo "... level_manager/level_manager.s"

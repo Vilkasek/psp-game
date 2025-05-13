@@ -212,6 +212,7 @@ CMakeFiles/sdl2-image.dir/map/map.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/backward/auto_ptr.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
+ /home/vilkas/projekty/psp-game/map/../camera/camera.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/vector \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_vector.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/initializer_list \
@@ -221,6 +222,12 @@ CMakeFiles/sdl2-image.dir/map/map.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/memory_resource.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/cstddef \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/uses_allocator_args.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/algorithm \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_algo.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/algorithmfwd.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_heap.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/uniform_int_dist.h \
+ /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_algorithm_defs.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/fstream \
  /usr/local/pspdev/psp/include/c++/14.1.0/istream \
  /usr/local/pspdev/psp/include/c++/14.1.0/ios \
