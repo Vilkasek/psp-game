@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include "../block/block.h"
+#include "../camera/camera.h"
 #include "../sprite/sprite.h"
 #include <SDL2/SDL.h>
 
@@ -11,7 +12,7 @@ public:
   ~Player();
 
   void setPosition(int x, int y);
-  void render(SDL_Renderer *renderer) const;
+  void render(SDL_Renderer *renderer, const Camera *camera = nullptr) const;
 
   int getX() const;
   int getY() const;
@@ -24,11 +25,12 @@ public:
 
   void resetGroundState() { isOnGround = false; }
 
-  SDL_Rect getRect();
+  SDL_Rect getRect() const;
 
   void checkCollision(const Block &block);
 
-  void move(SDL_GameController *controller, float deltaTime);
+  void move(SDL_GameController *controller, float deltaTime, int worldWidth,
+            int worldHeight);
 
   void updateTimers(float deltaTime);
 

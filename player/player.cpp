@@ -13,7 +13,22 @@ void Player::setPosition(int x, int y) {
   sprite.setPosition(x, y);
 }
 
-void Player::render(SDL_Renderer *renderer) const { sprite.render(renderer); }
+void Player::render(SDL_Renderer *renderer, const Camera *camera) const {
+  if (camera) {
+    // Renderuj gracza z uwzględnieniem przesunięcia kamery
+    SDL_Rect worldRect = {static_cast<int>(x), static_cast<int>(y),
+                          sprite.getWidth(), sprite.getHeight()};
+    SDL_Rect screenRect = camera->worldToScreen(worldRect);
+
+    // Utworzenie kopii sprite'a z przesunięciem kamery
+    Sprite tempSprite = sprite;
+    tempSprite.setPosition(screenRect.x, screenRect.y);
+    tempSprite.render(renderer);
+  } else {
+    // Stary sposób renderowania bez kamery
+    sprite.render(renderer);
+  }
+}
 
 int Player::getX() const { return static_cast<int>(x); }
 
@@ -94,7 +109,8 @@ void Player::updateTimers(float deltaTime) {
   }
 }
 
-void Player::move(SDL_GameController *controller, float deltaTime) {
+void Player::move(SDL_GameController *controller, float deltaTime,
+                  int worldWidth, int worldHeight) {
   updateTimers(deltaTime);
 
   bool left = false;
@@ -108,6 +124,15 @@ void Player::move(SDL_GameController *controller, float deltaTime) {
                                         SDL_CONTROLLER_BUTTON_DPAD_RIGHT);
     jump = SDL_GameControllerGetButton(controller, SDL_CONTROLLER_BUTTON_A);
   }
+
+  // Sprawdź klawiaturę
+  const Uint8 *keyboardState = SDL_GetKeyboardState(NULL);
+  if (keyboardState[SDL_SCANCODE_LEFT])
+    left = true;
+  if (keyboardState[SDL_SCANCODE_RIGHT])
+    right = true;
+  if (keyboardState[SDL_SCANCODE_SPACE] || keyboardState[SDL_SCANCODE_UP])
+    jump = true;
 
   if (left && !right) {
     velocityX -= acceleration * deltaTime;
@@ -160,19 +185,17 @@ void Player::move(SDL_GameController *controller, float deltaTime) {
   x += velocityX * deltaTime;
   y += velocityY * deltaTime;
 
-  const int screenWidth = 480;
-  const int screenHeight = 272;
-
+  // Sprawdzaj kolizje z granicami świata zamiast stałych wymiarów ekranu
   if (x < 0) {
     x = 0;
     velocityX = 0;
-  } else if (x > screenWidth - getWidth()) {
-    x = screenWidth - getWidth();
+  } else if (x > worldWidth - getWidth()) {
+    x = worldWidth - getWidth();
     velocityX = 0;
   }
 
-  if (y > screenHeight - getHeight()) {
-    y = screenHeight - getHeight();
+  if (y > worldHeight - getHeight()) {
+    y = worldHeight - getHeight();
     velocityY = 0;
     isOnGround = true;
   }
@@ -180,8 +203,7 @@ void Player::move(SDL_GameController *controller, float deltaTime) {
   sprite.setPosition(static_cast<int>(x), static_cast<int>(y));
 }
 
-SDL_Rect Player::getRect() {
-  sprite.setPosition(static_cast<int>(x), static_cast<int>(y));
+SDL_Rect Player::getRect() const {
   return {static_cast<int>(x), static_cast<int>(y), sprite.getWidth(),
           sprite.getHeight()};
 }
