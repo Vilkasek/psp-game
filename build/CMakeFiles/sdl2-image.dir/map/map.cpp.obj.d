@@ -264,5 +264,4 @@ CMakeFiles/sdl2-image.dir/map/map.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/codecvt.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/basic_file.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++io.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/fstream.tcc \
- /usr/local/pspdev/psp/include/c++/14.1.0/iostream
+ /usr/local/pspdev/psp/include/c++/14.1.0/bits/fstream.tcc

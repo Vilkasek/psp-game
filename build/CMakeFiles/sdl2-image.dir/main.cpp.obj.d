@@ -241,27 +241,4 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/cerrno \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/charconv.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.tcc \
- /home/vilkas/projekty/psp-game/player/player.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/iostream \
- /usr/local/pspdev/psp/include/c++/14.1.0/ostream \
- /usr/local/pspdev/psp/include/c++/14.1.0/ios \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/ios_base.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.tcc \
- /usr/local/pspdev/psp/include/c++/14.1.0/system_error \
- /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/error_constants.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/stdexcept \
- /usr/local/pspdev/psp/include/c++/14.1.0/streambuf \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf.tcc \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/cwctype \
- /usr/local/pspdev/psp/include/wctype.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_base.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf_iterator.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_inline.h \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.tcc \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.tcc \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream.tcc \
- /usr/local/pspdev/psp/include/c++/14.1.0/istream \
- /usr/local/pspdev/psp/include/c++/14.1.0/bits/istream.tcc
+ /home/vilkas/projekty/psp-game/player/player.h

@@ -22,18 +22,14 @@ public:
   float getVelocityY() const;
   bool getIsOnGround() const;
 
-  // Resetuje stan bycia na ziemi na początku każdej klatki
   void resetGroundState() { isOnGround = false; }
 
   SDL_Rect getRect();
 
-  // Sprawdza kolizję z blokiem i odpowiednio reaguje
   void checkCollision(const Block &block);
 
-  // Obsługuje ruch gracza (zarówno z kontrolera jak i klawiatury)
   void move(SDL_GameController *controller, float deltaTime);
 
-  // Aktualizuje timery dla coyote time i jump buffer
   void updateTimers(float deltaTime);
 
 private:
@@ -49,18 +45,14 @@ private:
   float jumpForce = -400.0f;
   bool isOnGround = false;
 
-  // Coyote Time - czas po opuszczeniu platformy, gdy nadal można skoczyć
-  float coyoteTime = 0.15f;       // Maksymalny czas coyote w sekundach
-  float currentCoyoteTime = 0.0f; // Aktualny czas coyote
-  bool wasOnGroundLastFrame =
-      false; // Czy gracz był na ziemi w poprzedniej klatce
+  float coyoteTime = 0.15f;
+  float currentCoyoteTime = 0.0f;
+  bool wasOnGroundLastFrame = false;
 
-  // Jump Buffer - zapamiętuje żądanie skoku tuż przed wylądowaniem
-  float jumpBufferTime = 0.1f; // Maksymalny czas bufora skoku w sekundach
-  float currentJumpBufferTime = 0.0f; // Aktualny czas bufora skoku
-  bool jumpBuffered = false;          // Czy żądanie skoku zostało zbuforowane
+  float jumpBufferTime = 0.1f;
+  float currentJumpBufferTime = 0.0f;
+  bool jumpBuffered = false;
 
-  // Metoda pomocnicza do sprawdzania czy punkt jest wewnątrz prostokąta
   bool pointInRect(float px, float py, const SDL_Rect &rect) {
     return (px >= rect.x && px <= rect.x + rect.w && py >= rect.y &&
             py <= rect.y + rect.h);

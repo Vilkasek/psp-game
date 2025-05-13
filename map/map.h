@@ -11,28 +11,27 @@ public:
 
   float getPlayerMapX();
   float getPlayerMapY();
-  
+
   const std::vector<Block> &getBlocks() const;
-  
-  // Metody do obsługi wyjść/przejść
+
   bool hasExit() const;
   SDL_Rect getExitRect() const;
   void clearExit();
   bool checkExitCollision(SDL_Rect playerRect) const;
-  
-  // Dodaj metodę do ustawienia tekstury wyjścia
-  void setExitTexture(SDL_Texture* texture);
+
+  void setExitTexture(SDL_Texture *texture);
 
 private:
   std::vector<Block> blocks;
-  SDL_Texture *texture;     // Tekstura dla bloków
-  SDL_Texture *exitTexture; // Tekstura dla wyjścia
+  SDL_Texture *texture;
+  SDL_Texture *exitTexture;
   SDL_Renderer *renderer;
 
   float playerMapX;
   float playerMapY;
-  
-  // Struktura dla wyjścia/przejścia
+
+  int tileSize = 32;
+
   bool exitExists;
   SDL_Rect exitRect;
 };

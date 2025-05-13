@@ -1,14 +1,11 @@
 #include "level_manager.h"
 #include <fstream>
-#include <iostream>
 
 LevelManager::LevelManager(SDL_Renderer *renderer, SDL_Texture *blockTexture)
     : renderer(renderer), blockTexture(blockTexture), exitTexture(nullptr),
       currentLevel(1), maxLevels(0), levelPath("maps/") {}
 
-LevelManager::~LevelManager() {
-  // Nie zwalniamy tekstur, ponieważ są one własnością wywołującego
-}
+LevelManager::~LevelManager() {}
 
 bool LevelManager::initialize(const std::string &levelDirPath) {
   levelPath = levelDirPath;
@@ -16,7 +13,6 @@ bool LevelManager::initialize(const std::string &levelDirPath) {
     levelPath += '/';
   }
 
-  // Znajdź maksymalną liczbę poziomów
   maxLevels = 0;
   int level = 1;
   while (levelFileExists(level)) {
@@ -25,12 +21,9 @@ bool LevelManager::initialize(const std::string &levelDirPath) {
   }
 
   if (maxLevels == 0) {
-    std::cerr << "No level files found in directory: " << levelPath
-              << std::endl;
     return false;
   }
 
-  std::cout << "Found " << maxLevels << " levels" << std::endl;
   return true;
 }
 
@@ -43,7 +36,6 @@ bool LevelManager::levelFileExists(int levelNum) const {
 
 bool LevelManager::loadLevel(int levelNum, Player &player, Map &map) {
   if (levelNum < 1 || levelNum > maxLevels) {
-    std::cerr << "Invalid level number: " << levelNum << std::endl;
     return false;
   }
 
@@ -55,14 +47,12 @@ bool LevelManager::loadLevel(int levelNum, Player &player, Map &map) {
                      static_cast<int>(map.getPlayerMapY()));
 
   currentLevel = levelNum;
-  std::cout << "Loaded level " << currentLevel << std::endl;
   return true;
 }
 
 bool LevelManager::goToNextLevel(Player &player, Map &map) {
   int nextLevel = currentLevel + 1;
   if (nextLevel > maxLevels) {
-    std::cout << "Congratulations! You completed all levels!" << std::endl;
     return false;
   }
 

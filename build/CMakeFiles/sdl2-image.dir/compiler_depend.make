@@ -74,15 +74,8 @@ CMakeFiles/sdl2-image.dir/block/block.cpp.obj: /home/vilkas/projekty/psp-game/bl
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/allocator.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_base.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_lockfree_defines.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/char_traits.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/charconv.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/concept_check.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/cpp_type_traits.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/cxxabi_forced.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/cxxabi_init_exception.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/exception.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/exception_defines.h \
@@ -91,24 +84,13 @@ CMakeFiles/sdl2-image.dir/block/block.cpp.obj: /home/vilkas/projekty/psp-game/bl
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/functional_hash.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/hash_bytes.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/invoke.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/ios_base.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/istream.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/localefwd.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/memory_resource.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/memoryfwd.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/move.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/nested_exception.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/new_allocator.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream_insert.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/postypes.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/predefined_ops.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/ptr_traits.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/range_access.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/refwrap.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/requires_hosted.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/shared_ptr.h \
@@ -126,25 +108,15 @@ CMakeFiles/sdl2-image.dir/block/block.cpp.obj: /home/vilkas/projekty/psp-game/bl
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_raw_storage_iter.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_tempbuf.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_uninitialized.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf_iterator.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/string_view.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stringfwd.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/unique_ptr.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/uses_allocator.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/uses_allocator_args.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/utility.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/version.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/cctype \
-  /usr/local/pspdev/psp/include/c++/14.1.0/cerrno \
-  /usr/local/pspdev/psp/include/c++/14.1.0/clocale \
   /usr/local/pspdev/psp/include/c++/14.1.0/cmath \
   /usr/local/pspdev/psp/include/c++/14.1.0/concepts \
-  /usr/local/pspdev/psp/include/c++/14.1.0/cstddef \
-  /usr/local/pspdev/psp/include/c++/14.1.0/cstdio \
   /usr/local/pspdev/psp/include/c++/14.1.0/cstdlib \
   /usr/local/pspdev/psp/include/c++/14.1.0/cwchar \
-  /usr/local/pspdev/psp/include/c++/14.1.0/cwctype \
   /usr/local/pspdev/psp/include/c++/14.1.0/debug/assertions.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/debug/debug.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/exception \
@@ -153,38 +125,23 @@ CMakeFiles/sdl2-image.dir/block/block.cpp.obj: /home/vilkas/projekty/psp-game/bl
   /usr/local/pspdev/psp/include/c++/14.1.0/ext/atomicity.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/ext/concurrence.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/ext/numeric_traits.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/ext/string_conversions.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/ext/type_traits.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/initializer_list \
-  /usr/local/pspdev/psp/include/c++/14.1.0/ios \
   /usr/local/pspdev/psp/include/c++/14.1.0/iosfwd \
-  /usr/local/pspdev/psp/include/c++/14.1.0/iostream \
-  /usr/local/pspdev/psp/include/c++/14.1.0/istream \
   /usr/local/pspdev/psp/include/c++/14.1.0/limits \
   /usr/local/pspdev/psp/include/c++/14.1.0/math.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/memory \
   /usr/local/pspdev/psp/include/c++/14.1.0/new \
-  /usr/local/pspdev/psp/include/c++/14.1.0/ostream \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/atomic_word.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++allocator.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++config.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++locale.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/cpu_defines.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_base.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_inline.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/error_constants.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr-default.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/os_defines.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/pstl/pstl_config.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/stdexcept \
   /usr/local/pspdev/psp/include/c++/14.1.0/stdlib.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/streambuf \
-  /usr/local/pspdev/psp/include/c++/14.1.0/string \
-  /usr/local/pspdev/psp/include/c++/14.1.0/string_view \
-  /usr/local/pspdev/psp/include/c++/14.1.0/system_error \
   /usr/local/pspdev/psp/include/c++/14.1.0/tr1/bessel_function.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/tr1/beta_function.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/tr1/ell_integral.tcc \
@@ -204,7 +161,6 @@ CMakeFiles/sdl2-image.dir/block/block.cpp.obj: /home/vilkas/projekty/psp-game/bl
   /usr/local/pspdev/psp/include/errno.h \
   /usr/local/pspdev/psp/include/inttypes.h \
   /usr/local/pspdev/psp/include/limits.h \
-  /usr/local/pspdev/psp/include/locale.h \
   /usr/local/pspdev/psp/include/machine/_default_types.h \
   /usr/local/pspdev/psp/include/machine/_endian.h \
   /usr/local/pspdev/psp/include/machine/_types.h \
@@ -250,8 +206,7 @@ CMakeFiles/sdl2-image.dir/block/block.cpp.obj: /home/vilkas/projekty/psp-game/bl
   /usr/local/pspdev/psp/include/sys/timespec.h \
   /usr/local/pspdev/psp/include/sys/types.h \
   /usr/local/pspdev/psp/include/time.h \
-  /usr/local/pspdev/psp/include/wchar.h \
-  /usr/local/pspdev/psp/include/wctype.h
+  /usr/local/pspdev/psp/include/wchar.h
 
 CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj: /home/vilkas/projekty/psp-game/level_manager/level_manager.cpp \
   /home/vilkas/projekty/psp-game/sprite/sprite.h \
@@ -420,7 +375,6 @@ CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj: /home/vilkas/proj
   /usr/local/pspdev/psp/include/c++/14.1.0/initializer_list \
   /usr/local/pspdev/psp/include/c++/14.1.0/ios \
   /usr/local/pspdev/psp/include/c++/14.1.0/iosfwd \
-  /usr/local/pspdev/psp/include/c++/14.1.0/iostream \
   /usr/local/pspdev/psp/include/c++/14.1.0/istream \
   /usr/local/pspdev/psp/include/c++/14.1.0/limits \
   /usr/local/pspdev/psp/include/c++/14.1.0/math.h \
@@ -521,10 +475,10 @@ CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj: /home/vilkas/proj
 CMakeFiles/sdl2-image.dir/main.cpp.obj: /home/vilkas/projekty/psp-game/main.cpp \
   /home/vilkas/projekty/psp-game/sprite/sprite.h \
   /home/vilkas/projekty/psp-game/block/block.h \
-  /home/vilkas/projekty/psp-game/player/player.h \
-  /home/vilkas/projekty/psp-game/level_manager/level_manager.h \
   /home/vilkas/projekty/psp-game/map/map.h \
   /home/vilkas/projekty/psp-game/sprite/sprite.h \
+  /home/vilkas/projekty/psp-game/player/player.h \
+  /home/vilkas/projekty/psp-game/level_manager/level_manager.h \
   /home/vilkas/projekty/psp-game/player/player.h \
   /usr/local/pspdev/lib/gcc/psp/14.1.0/include/float.h \
   /usr/local/pspdev/lib/gcc/psp/14.1.0/include/limits.h \
@@ -596,8 +550,6 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: /home/vilkas/projekty/psp-game/main.cpp 
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/allocator.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_base.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_lockfree_defines.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/char_traits.h \
@@ -613,19 +565,12 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: /home/vilkas/projekty/psp-game/main.cpp 
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/functional_hash.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/hash_bytes.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/invoke.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/ios_base.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/istream.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/localefwd.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/memory_resource.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/memoryfwd.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/move.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/nested_exception.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/new_allocator.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream_insert.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/postypes.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/predefined_ops.h \
@@ -650,8 +595,6 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: /home/vilkas/projekty/psp-game/main.cpp 
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_tempbuf.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_uninitialized.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_vector.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf.tcc \
-  /usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf_iterator.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/string_view.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/stringfwd.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/bits/unique_ptr.h \
@@ -669,7 +612,6 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: /home/vilkas/projekty/psp-game/main.cpp 
   /usr/local/pspdev/psp/include/c++/14.1.0/cstdio \
   /usr/local/pspdev/psp/include/c++/14.1.0/cstdlib \
   /usr/local/pspdev/psp/include/c++/14.1.0/cwchar \
-  /usr/local/pspdev/psp/include/c++/14.1.0/cwctype \
   /usr/local/pspdev/psp/include/c++/14.1.0/debug/assertions.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/debug/debug.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/exception \
@@ -681,35 +623,25 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: /home/vilkas/projekty/psp-game/main.cpp 
   /usr/local/pspdev/psp/include/c++/14.1.0/ext/string_conversions.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/ext/type_traits.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/initializer_list \
-  /usr/local/pspdev/psp/include/c++/14.1.0/ios \
   /usr/local/pspdev/psp/include/c++/14.1.0/iosfwd \
-  /usr/local/pspdev/psp/include/c++/14.1.0/iostream \
-  /usr/local/pspdev/psp/include/c++/14.1.0/istream \
   /usr/local/pspdev/psp/include/c++/14.1.0/limits \
   /usr/local/pspdev/psp/include/c++/14.1.0/math.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/memory \
   /usr/local/pspdev/psp/include/c++/14.1.0/new \
-  /usr/local/pspdev/psp/include/c++/14.1.0/ostream \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/atomic_word.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++allocator.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++config.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++locale.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/cpu_defines.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_base.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_inline.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/error_constants.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr-default.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/os_defines.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
   /usr/local/pspdev/psp/include/c++/14.1.0/pstl/pstl_config.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/stdexcept \
   /usr/local/pspdev/psp/include/c++/14.1.0/stdlib.h \
-  /usr/local/pspdev/psp/include/c++/14.1.0/streambuf \
   /usr/local/pspdev/psp/include/c++/14.1.0/string \
   /usr/local/pspdev/psp/include/c++/14.1.0/string_view \
-  /usr/local/pspdev/psp/include/c++/14.1.0/system_error \
   /usr/local/pspdev/psp/include/c++/14.1.0/tr1/bessel_function.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/tr1/beta_function.tcc \
   /usr/local/pspdev/psp/include/c++/14.1.0/tr1/ell_integral.tcc \
@@ -776,8 +708,7 @@ CMakeFiles/sdl2-image.dir/main.cpp.obj: /home/vilkas/projekty/psp-game/main.cpp 
   /usr/local/pspdev/psp/include/sys/timespec.h \
   /usr/local/pspdev/psp/include/sys/types.h \
   /usr/local/pspdev/psp/include/time.h \
-  /usr/local/pspdev/psp/include/wchar.h \
-  /usr/local/pspdev/psp/include/wctype.h
+  /usr/local/pspdev/psp/include/wchar.h
 
 CMakeFiles/sdl2-image.dir/map/map.cpp.obj: /home/vilkas/projekty/psp-game/map/map.cpp \
   /home/vilkas/projekty/psp-game/sprite/sprite.h \
@@ -943,7 +874,6 @@ CMakeFiles/sdl2-image.dir/map/map.cpp.obj: /home/vilkas/projekty/psp-game/map/ma
   /usr/local/pspdev/psp/include/c++/14.1.0/initializer_list \
   /usr/local/pspdev/psp/include/c++/14.1.0/ios \
   /usr/local/pspdev/psp/include/c++/14.1.0/iosfwd \
-  /usr/local/pspdev/psp/include/c++/14.1.0/iostream \
   /usr/local/pspdev/psp/include/c++/14.1.0/istream \
   /usr/local/pspdev/psp/include/c++/14.1.0/limits \
   /usr/local/pspdev/psp/include/c++/14.1.0/math.h \
@@ -1447,33 +1377,67 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /home/vilkas/projekty/psp-game/sprite/sprite.cpp:
 
+/usr/local/pspdev/psp/include/c++/14.1.0/iostream:
+
 /home/vilkas/projekty/psp-game/player/player.cpp:
 
 /home/vilkas/projekty/psp-game/main.cpp:
 
+/usr/local/pspdev/psp/include/wctype.h:
+
+/usr/local/pspdev/psp/include/locale.h:
+
 /usr/local/pspdev/psp/include/c++/14.1.0/vector:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++io.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/system_error:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/fstream:
+/usr/local/pspdev/psp/include/c++/14.1.0/string_view:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/vector.tcc:
+/usr/local/pspdev/psp/include/c++/14.1.0/iosfwd:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_vector.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/ext/concurrence.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_bvector.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/typeinfo:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf_iterator.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/ext/aligned_buffer.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/memoryfwd.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/exception:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/debug/debug.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/cpp_type_traits.h:
+
+/usr/local/pspdev/psp/include/SDL2/SDL_touch.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cwchar:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/concepts:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cstdlib:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cmath:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/version.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/char_traits.h:
+
+/usr/local/pspdev/psp/include/sys/_stdint.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/specfun.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/ext/alloc_traits.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/ext/numeric_traits.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/requires_hosted.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_iterator_base_types.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_raw_storage_iter.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/tr1/legendre_function.tcc:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/ptr_traits.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_algobase.h:
 
@@ -1481,11 +1445,15 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/move.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/memory_resource.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/memoryfwd.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/localefwd.h:
+/home/vilkas/projekty/psp-game/level_manager/level_manager.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/ios_base.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr-default.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf_iterator.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/invoke.h:
 
@@ -1497,45 +1465,19 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/sys/_sigset.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.tcc:
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/functional_hash.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/unique_ptr.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/functional_hash.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.tcc:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/functexcept.h:
-
-/usr/local/pspdev/psp/include/SDL2/SDL_blendmode.h:
-
-/usr/local/pspdev/lib/gcc/psp/14.1.0/include/float.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/exception:
-
-/usr/local/pspdev/psp/include/sys/_stdint.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/char_traits.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cwchar:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_raw_storage_iter.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/tr1/legendre_function.tcc:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/ptr_traits.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.tcc:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++locale.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_uninitialized.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_base.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/nested_exception.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/basic_file.h:
-
-/usr/local/pspdev/psp/include/SDL2/SDL_misc.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/predefined_ops.h:
 
@@ -1567,10 +1509,6 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/SDL2/SDL_surface.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/istream.tcc:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/std_abs.h:
-
 /usr/local/pspdev/lib/gcc/psp/14.1.0/include/stdarg.h:
 
 /home/vilkas/projekty/psp-game/map/map.h:
@@ -1587,10 +1525,6 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /home/vilkas/projekty/psp-game/block/block.cpp:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/cxxabi_forced.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream.tcc:
-
 /usr/local/pspdev/psp/include/SDL2/SDL_hidapi.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h:
@@ -1598,6 +1532,16 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 /usr/local/pspdev/psp/include/sys/_timespec.h:
 
 /usr/local/pspdev/psp/include/SDL2/SDL_atomic.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/exception_ptr.h:
+
+/usr/local/pspdev/psp/include/SDL2/SDL_events.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/ext/atomicity.h:
+
+/usr/local/pspdev/psp/include/SDL2/SDL_blendmode.h:
+
+/usr/local/pspdev/lib/gcc/psp/14.1.0/include/float.h:
 
 /usr/local/pspdev/psp/include/SDL2/SDL_endian.h:
 
@@ -1607,23 +1551,13 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_pair.h:
 
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/vector.tcc:
+
 /usr/local/pspdev/lib/gcc/psp/14.1.0/include/syslimits.h:
 
 /usr/local/pspdev/psp/include/SDL2/SDL_rwops.h:
 
-/usr/local/pspdev/psp/include/SDL2/SDL_events.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/exception_ptr.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/concepts:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cstdlib:
-
 /usr/local/pspdev/psp/include/c++/14.1.0/backward/auto_ptr.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream_insert.h:
-
-/home/vilkas/projekty/psp-game/level_manager/level_manager.cpp:
 
 /usr/local/pspdev/psp/include/sys/cdefs.h:
 
@@ -1649,11 +1583,11 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/SDL2/SDL_loadso.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/charconv.h:
+/usr/local/pspdev/psp/include/SDL2/SDL_misc.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/basic_file.h:
 
 /usr/local/pspdev/psp/include/SDL2/SDL_pixels.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.tcc:
 
 /usr/local/pspdev/lib/gcc/psp/14.1.0/include/stddef.h:
 
@@ -1677,13 +1611,11 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/c++/14.1.0/new:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/alloc_traits.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.h:
-
 /usr/local/pspdev/psp/include/SDL2/SDL_joystick.h:
 
 /usr/local/pspdev/psp/include/SDL2/SDL_audio.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/tr1/poly_hermite.tcc:
 
 /home/vilkas/projekty/psp-game/player/player.h:
 
@@ -1691,21 +1623,11 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/c++/14.1.0/stdexcept:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/tr1/poly_hermite.tcc:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf.tcc:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_lockfree_defines.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/limits:
 
 /usr/local/pspdev/psp/include/SDL2/SDL_power.h:
 
 /usr/local/pspdev/psp/include/SDL2/SDL_locale.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.h:
-
-/usr/local/pspdev/psp/include/sys/stdio.h:
-
-/usr/local/pspdev/psp/include/SDL2/SDL_metal.h:
 
 /usr/local/pspdev/psp/include/sys/_types.h:
 
@@ -1729,19 +1651,29 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/SDL2/SDL_scancode.h:
 
+/usr/local/pspdev/psp/include/SDL2/SDL_filesystem.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/ext/type_traits.h:
+
 /usr/local/pspdev/psp/include/SDL2/SDL_sensor.h:
+
+/home/vilkas/projekty/psp-game/map/map.cpp:
+
+/usr/local/pspdev/psp/include/sys/timespec.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_tempbuf.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/uses_allocator.h:
+
+/usr/local/pspdev/psp/include/SDL2/SDL_stdinc.h:
 
 /usr/local/pspdev/psp/include/sched.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.tcc:
-
 /usr/local/pspdev/psp/include/SDL2/SDL_system.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/cpp_type_traits.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/utility.h:
 
-/usr/local/pspdev/psp/include/SDL2/SDL_touch.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/debug/debug.h:
+/usr/local/pspdev/psp/include/machine/setjmp.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/allocated_ptr.h:
 
@@ -1759,89 +1691,7 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/SDL2/begin_code.h:
 
-/usr/local/pspdev/psp/include/SDL2/SDL_stdinc.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/uses_allocator.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/utility.h:
-
-/usr/local/pspdev/psp/include/machine/setjmp.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/version.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cctype:
-
-/usr/local/pspdev/psp/include/machine/types.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cerrno:
-
-/usr/local/pspdev/psp/include/SDL2/SDL_hints.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/clocale:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/istream:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cmath:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/gthr-default.h:
-
-/home/vilkas/projekty/psp-game/level_manager/level_manager.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/stringfwd.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cstdio:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cwctype:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/postypes.h:
-
-/usr/local/pspdev/psp/include/machine/_types.h:
-
-/usr/local/pspdev/psp/include/sys/types.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/debug/assertions.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/iosfwd:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ext/aligned_buffer.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ext/alloc_traits.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ext/atomicity.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ext/concurrence.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/typeinfo:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ext/numeric_traits.h:
-
-/usr/local/pspdev/psp/include/SDL2/SDL_config.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_inline.h:
-
-/usr/local/pspdev/psp/include/sys/_intsup.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ext/string_conversions.h:
-
-/usr/local/pspdev/psp/include/SDL2/SDL_filesystem.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ext/type_traits.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/system_error:
-
-/home/vilkas/projekty/psp-game/map/map.cpp:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_tempbuf.h:
-
-/usr/local/pspdev/psp/include/sys/timespec.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/initializer_list:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/ios:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/iostream:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/limits:
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_classes.tcc:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/atomic_word.h:
 
@@ -1855,31 +1705,17 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++config.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_base.h:
+/usr/local/pspdev/psp/include/SDL2/SDL_guid.h:
 
-/usr/local/pspdev/psp/include/inttypes.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/pstl/pstl_config.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/error_constants.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/cstddef:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/string:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/bits/codecvt.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/string_view:
+/usr/local/pspdev/psp/include/sys/select.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_iterator.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/new_allocator.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/tr1/exp_integral.tcc:
-
-/usr/local/pspdev/psp/include/SDL2/SDL_guid.h:
-
-/usr/local/pspdev/psp/include/c++/14.1.0/pstl/pstl_config.h:
-
-/usr/local/pspdev/psp/include/sys/select.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/tr1/gamma.tcc:
 
@@ -1895,15 +1731,19 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/c++/14.1.0/tr1/special_function_util.h:
 
+/usr/local/pspdev/psp/include/c++/14.1.0/fstream:
+
 /usr/local/pspdev/psp/include/alloca.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/tuple:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/type_traits:
 
-/usr/local/pspdev/psp/include/limits.h:
+/usr/local/pspdev/psp/include/inttypes.h:
 
-/usr/local/pspdev/psp/include/locale.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_base.h:
+
+/usr/local/pspdev/psp/include/limits.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/memory:
 
@@ -1918,6 +1758,12 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 /usr/local/pspdev/psp/include/machine/endian.h:
 
 /usr/local/pspdev/psp/include/machine/stdlib.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/postypes.h:
+
+/usr/local/pspdev/psp/include/machine/_types.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cwctype:
 
 /usr/local/pspdev/psp/include/newlib.h:
 
@@ -1947,10 +1793,6 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/sys/reent.h:
 
-/usr/local/pspdev/psp/include/c++/14.1.0/streambuf:
-
-/usr/local/pspdev/psp/include/sys/_timeval.h:
-
 /usr/local/pspdev/psp/include/sys/config.h:
 
 /usr/local/pspdev/psp/include/sys/errno.h:
@@ -1977,6 +1819,94 @@ CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj: /home/vilkas/projekty/psp-game/
 
 /usr/local/pspdev/psp/include/sys/timeb.h:
 
-/usr/local/pspdev/psp/include/wctype.h:
+/usr/local/pspdev/psp/include/c++/14.1.0/debug/assertions.h:
+
+/usr/local/pspdev/psp/include/sys/types.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_string.tcc:
+
+/usr/local/pspdev/psp/include/sys/stdio.h:
+
+/usr/local/pspdev/psp/include/SDL2/SDL_metal.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/basic_ios.tcc:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++locale.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/charconv.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/codecvt.h:
 
 /usr/local/pspdev/psp/include/c++/14.1.0/bits/fstream.tcc:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_bvector.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/ios_base.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/std_abs.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/istream.tcc:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/alloc_traits.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/locale_facets.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/localefwd.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/memory_resource.h:
+
+/usr/local/pspdev/psp/include/sys/_timeval.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/streambuf:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/cxxabi_forced.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream.tcc:
+
+/home/vilkas/projekty/psp-game/level_manager/level_manager.cpp:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/ostream_insert.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_vector.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/atomic_lockfree_defines.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/streambuf.tcc:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cctype:
+
+/usr/local/pspdev/psp/include/machine/types.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cerrno:
+
+/usr/local/pspdev/psp/include/sys/_intsup.h:
+
+/usr/local/pspdev/psp/include/SDL2/SDL_config.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/ctype_inline.h:
+
+/usr/local/pspdev/psp/include/SDL2/SDL_hints.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/clocale:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/istream:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/string:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cstddef:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/bits/stringfwd.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/cstdio:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/ext/string_conversions.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/initializer_list:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/ios:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/c++io.h:
+
+/usr/local/pspdev/psp/include/c++/14.1.0/psp/bits/error_constants.h:
