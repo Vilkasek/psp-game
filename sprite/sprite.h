@@ -20,6 +20,8 @@ public:
 
   SDL_Rect getRect();
 
+  SDL_Texture *getTexture() const { return texture; }
+
 private:
   SDL_Texture *texture = nullptr;
   SDL_Rect rect = {};

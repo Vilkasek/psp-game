@@ -119,8 +119,8 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
 
   // Create a camera with screen dimensions and world dimensions
   Camera camera(SCREEN_WIDTH, SCREEN_HEIGHT, map.getWorldWidth(),
-                map.getWorldHeight());
-  camera.setSmoothingFactor(0.1f);
+                map.getWorldHeight() - 32);
+  camera.setSmoothingFactor(0.5f);
 
   while (running) {
     currentTime = SDL_GetTicks();

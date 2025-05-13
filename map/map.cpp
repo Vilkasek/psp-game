@@ -56,48 +56,55 @@ void Map::loadFromFile(const char *filename) {
 
 void Map::render(SDL_Renderer *renderer, const Camera *camera) {
   for (auto &block : blocks) {
+    SDL_Rect blockRect = block.getRect();
+    SDL_Rect screenRect;
+
     if (camera) {
-      // Renderuj blok z uwzględnieniem kamery
-      SDL_Rect worldRect = block.getRect();
-      SDL_Rect screenRect = camera->worldToScreen(worldRect);
+      // Prostsze obliczenie pozycji ekranowej
+      screenRect.x = blockRect.x - static_cast<int>(camera->getOffsetX());
+      screenRect.y = blockRect.y - static_cast<int>(camera->getOffsetY());
+      screenRect.w = blockRect.w;
+      screenRect.h = blockRect.h;
 
       // Renderuj tylko jeśli widoczny na ekranie
       if (screenRect.x + screenRect.w >= 0 && screenRect.x <= 480 &&
           screenRect.y + screenRect.h >= 0 && screenRect.y <= 272) {
 
-        // Użyj tekstury bloku, ale z przesunięciem kamery
-        if (block.getRect().w == tileSize && block.getRect().h == tileSize) {
-          SDL_RenderCopy(renderer, texture, NULL, &screenRect);
-        } else {
-          SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
-          SDL_RenderFillRect(renderer, &screenRect);
-        }
+        // Debug pozycji bloku
+        // printf("Block: world(%d,%d) -> screen(%d,%d)\n",
+        //       blockRect.x, blockRect.y, screenRect.x, screenRect.y);
+
+        SDL_RenderCopy(renderer, texture, NULL, &screenRect);
       }
     } else {
-      // Stary sposób bez kamery
       block.render(renderer);
     }
   }
 
+  // Podobne uproszczenie dla wyjścia
   if (exitExists) {
-    SDL_Rect exitRectToRender = exitRect;
+    SDL_Rect exitScreenRect;
 
     if (camera) {
-      exitRectToRender = camera->worldToScreen(exitRect);
+      exitScreenRect.x = exitRect.x - static_cast<int>(camera->getOffsetX());
+      exitScreenRect.y = exitRect.y - static_cast<int>(camera->getOffsetY());
+      exitScreenRect.w = exitRect.w;
+      exitScreenRect.h = exitRect.h;
+    } else {
+      exitScreenRect = exitRect;
     }
 
     if (exitTexture) {
-      SDL_RenderCopy(renderer, exitTexture, NULL, &exitRectToRender);
+      SDL_RenderCopy(renderer, exitTexture, NULL, &exitScreenRect);
     } else {
       SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
-      SDL_RenderFillRect(renderer, &exitRectToRender);
+      SDL_RenderFillRect(renderer, &exitScreenRect);
 
       SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-      SDL_RenderDrawRect(renderer, &exitRectToRender);
+      SDL_RenderDrawRect(renderer, &exitScreenRect);
     }
   }
 }
-
 bool Map::hasExit() const { return exitExists; }
 
 SDL_Rect Map::getExitRect() const { return exitRect; }
