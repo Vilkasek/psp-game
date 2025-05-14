@@ -19,25 +19,17 @@ void Player::render(SDL_Renderer *renderer, const Camera *camera) const {
   SDL_Rect screenRect;
 
   if (camera) {
-    // Uprość obliczenie pozycji ekranowej
     screenRect.x = playerRect.x - static_cast<int>(camera->getOffsetX());
     screenRect.y = playerRect.y - static_cast<int>(camera->getOffsetY());
     screenRect.w = playerRect.w;
     screenRect.h = playerRect.h;
-
-    // Debug pozycji gracza
-    printf("Player: world(%d,%d) -> screen(%d,%d)\n", playerRect.x,
-           playerRect.y, screenRect.x, screenRect.y);
   } else {
     screenRect = playerRect;
   }
 
-  // Renderuj gracza bezpośrednio
-  // Najpierw zmodyfikuj sprite.h, aby dodać dostęp do tekstury
   if (sprite.getTexture()) {
     SDL_RenderCopy(renderer, sprite.getTexture(), NULL, &screenRect);
   } else {
-    // Awaryjne renderowanie (debug)
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
     SDL_RenderFillRect(renderer, &screenRect);
   }

@@ -37,5 +37,5 @@ void Camera::setSmoothingFactor(float smoothing) {
 
 void Camera::setBounds(int worldWidth, int worldHeight) {
   this->worldWidth = worldWidth;
-  this->worldHeight = worldHeight - 32;
+  this->worldHeight = worldHeight;
 }
