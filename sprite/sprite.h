@@ -22,9 +22,15 @@ public:
 
   SDL_Texture *getTexture() const { return texture; }
 
+  // Dodane funkcje do obsługi flipowania
+  void setFlip(SDL_RendererFlip flip);
+  SDL_RendererFlip getFlip() const;
+
 private:
   SDL_Texture *texture = nullptr;
   SDL_Rect rect = {};
+  // Dodane pole do przechowywania informacji o flipowaniu
+  SDL_RendererFlip flip = SDL_FLIP_NONE;
 
   bool loadTexture();
   SDL_Texture *loadTexture(const char *filename, SDL_Window *window);

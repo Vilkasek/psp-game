@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=sdl2-image
+CMAKE_PROJECT_NAME:STATIC=SDL2_image
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/local/pspdev/bin/psp-ranlib
@@ -206,8 +206,8 @@ CMAKE_STRIP:FILEPATH=/usr/local/pspdev/bin/psp-strip
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/usr/local/pspdev/psp/share/pspdev.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/usr/local/pspdev/psp/share/pspdev.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -223,6 +223,15 @@ PKG_CONFIG_ARGN:STRING=
 
 //Path to pkg-config
 PKG_CONFIG_EXECUTABLE:STRING=/usr/local/pspdev/bin/psp-pkg-config
+
+//Value Computed by CMake
+SDL2_image_BINARY_DIR:STATIC=/home/vilkas/projekty/psp-game/build
+
+//Value Computed by CMake
+SDL2_image_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+SDL2_image_SOURCE_DIR:STATIC=/home/vilkas/projekty/psp-game
 
 //Path to a library.
 pkgcfg_lib_SDL2_GL:FILEPATH=/usr/local/pspdev/psp/lib/libGL.a
@@ -313,15 +322,6 @@ pkgcfg_lib_SDL2_pspvfpu:FILEPATH=/usr/local/pspdev/psp/sdk/lib/libpspvfpu.a
 
 //Path to a library.
 pkgcfg_lib_SDL2_pspvram:FILEPATH=/usr/local/pspdev/psp/lib/libpspvram.a
-
-//Value Computed by CMake
-sdl2-image_BINARY_DIR:STATIC=/home/vilkas/projekty/psp-game/build
-
-//Value Computed by CMake
-sdl2-image_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-sdl2-image_SOURCE_DIR:STATIC=/home/vilkas/projekty/psp-game
 
 
 ########################

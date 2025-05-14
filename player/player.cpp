@@ -28,7 +28,10 @@ void Player::render(SDL_Renderer *renderer, const Camera *camera) const {
   }
 
   if (sprite.getTexture()) {
-    SDL_RenderCopy(renderer, sprite.getTexture(), NULL, &screenRect);
+    // Ustawienie odpowiedniego flipowania w zależności od kierunku
+    SDL_RendererFlip flip = facingRight ? SDL_FLIP_NONE : SDL_FLIP_HORIZONTAL;
+    SDL_RenderCopyEx(renderer, sprite.getTexture(), NULL, &screenRect, 0.0,
+                     NULL, flip);
   } else {
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
     SDL_RenderFillRect(renderer, &screenRect);
@@ -48,6 +51,16 @@ bool Player::getIsOnGround() const { return isOnGround; }
 int Player::getWidth() const { return sprite.getWidth(); }
 
 int Player::getHeight() const { return sprite.getHeight(); }
+
+void Player::updateDirection() {
+  // Aktualizacja kierunku gracza na podstawie prędkości poziomej
+  if (velocityX > 0) {
+    facingRight = true;
+  } else if (velocityX < 0) {
+    facingRight = false;
+  }
+  // Jeśli prędkość jest 0, zachowujemy obecny kierunek
+}
 
 void Player::checkCollision(const Block &block) {
   SDL_Rect playerRect = getRect();
@@ -204,6 +217,9 @@ void Player::move(SDL_GameController *controller, float deltaTime,
     velocityY = 0;
     isOnGround = true;
   }
+
+  // Aktualizacja kierunku gracza
+  updateDirection();
 
   sprite.setPosition(static_cast<int>(x), static_cast<int>(y));
 }

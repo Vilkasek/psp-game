@@ -30,7 +30,8 @@ bool Sprite::loadTexture() {
 }
 
 void Sprite::render(SDL_Renderer *renderer) const {
-  SDL_RenderCopy(renderer, texture, NULL, &rect);
+  // Zmodyfikowana funkcja render z obsługą flip
+  SDL_RenderCopyEx(renderer, texture, NULL, &rect, 0.0, NULL, flip);
 }
 
 void Sprite::unloadTexture() {
@@ -54,3 +55,8 @@ SDL_Texture *Sprite::loadTexture(const char *filename, SDL_Window *window) {
 }
 
 SDL_Rect Sprite::getRect() { return rect; }
+
+// Implementacja nowych funkcji
+void Sprite::setFlip(SDL_RendererFlip newFlip) { flip = newFlip; }
+
+SDL_RendererFlip Sprite::getFlip() const { return flip; }

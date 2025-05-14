@@ -34,6 +34,13 @@ public:
 
   void updateTimers(float deltaTime);
 
+  // Nowa funkcja do aktualizacji kierunku gracza
+  void updateDirection();
+
+  // Nowe funkcje do obsługi kierunku
+  bool isFacingRight() const { return facingRight; }
+  void setFacingRight(bool facing) { facingRight = facing; }
+
 private:
   Sprite sprite;
   float x = 0.0f;
@@ -46,6 +53,9 @@ private:
   float gravity = 980.0f;
   float jumpForce = -400.0f;
   bool isOnGround = false;
+
+  // Flaga określająca kierunek, w którym zwrócony jest gracz
+  bool facingRight = true;
 
   float coyoteTime = 0.15f;
   float currentCoyoteTime = 0.0f;

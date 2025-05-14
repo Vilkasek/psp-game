@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sdl2-image
+# Target rules for targets named ferrets_grape
 
 # Build rule for target.
-sdl2-image: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl2-image
-.PHONY : sdl2-image
+ferrets_grape: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ferrets_grape
+.PHONY : ferrets_grape
 
 # fast build rule for target.
-sdl2-image/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/build
-.PHONY : sdl2-image/fast
+ferrets_grape/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/build
+.PHONY : ferrets_grape/fast
 
 block/block.obj: block/block.cpp.obj
 .PHONY : block/block.obj
 
 # target to build an object file
 block/block.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/block/block.cpp.obj
 .PHONY : block/block.cpp.obj
 
 block/block.i: block/block.cpp.i
@@ -142,7 +142,7 @@ block/block.i: block/block.cpp.i
 
 # target to preprocess a source file
 block/block.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/block/block.cpp.i
 .PHONY : block/block.cpp.i
 
 block/block.s: block/block.cpp.s
@@ -150,7 +150,7 @@ block/block.s: block/block.cpp.s
 
 # target to generate assembly for a file
 block/block.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/block/block.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/block/block.cpp.s
 .PHONY : block/block.cpp.s
 
 camera/camera.obj: camera/camera.cpp.obj
@@ -158,7 +158,7 @@ camera/camera.obj: camera/camera.cpp.obj
 
 # target to build an object file
 camera/camera.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/camera/camera.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/camera/camera.cpp.obj
 .PHONY : camera/camera.cpp.obj
 
 camera/camera.i: camera/camera.cpp.i
@@ -166,7 +166,7 @@ camera/camera.i: camera/camera.cpp.i
 
 # target to preprocess a source file
 camera/camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/camera/camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/camera/camera.cpp.i
 .PHONY : camera/camera.cpp.i
 
 camera/camera.s: camera/camera.cpp.s
@@ -174,7 +174,7 @@ camera/camera.s: camera/camera.cpp.s
 
 # target to generate assembly for a file
 camera/camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/camera/camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/camera/camera.cpp.s
 .PHONY : camera/camera.cpp.s
 
 level_manager/level_manager.obj: level_manager/level_manager.cpp.obj
@@ -182,7 +182,7 @@ level_manager/level_manager.obj: level_manager/level_manager.cpp.obj
 
 # target to build an object file
 level_manager/level_manager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/level_manager/level_manager.cpp.obj
 .PHONY : level_manager/level_manager.cpp.obj
 
 level_manager/level_manager.i: level_manager/level_manager.cpp.i
@@ -190,7 +190,7 @@ level_manager/level_manager.i: level_manager/level_manager.cpp.i
 
 # target to preprocess a source file
 level_manager/level_manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/level_manager/level_manager.cpp.i
 .PHONY : level_manager/level_manager.cpp.i
 
 level_manager/level_manager.s: level_manager/level_manager.cpp.s
@@ -198,7 +198,7 @@ level_manager/level_manager.s: level_manager/level_manager.cpp.s
 
 # target to generate assembly for a file
 level_manager/level_manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/level_manager/level_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/level_manager/level_manager.cpp.s
 .PHONY : level_manager/level_manager.cpp.s
 
 main.obj: main.cpp.obj
@@ -206,7 +206,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -214,7 +214,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -222,7 +222,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 map/map.obj: map/map.cpp.obj
@@ -230,7 +230,7 @@ map/map.obj: map/map.cpp.obj
 
 # target to build an object file
 map/map.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/map/map.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/map/map.cpp.obj
 .PHONY : map/map.cpp.obj
 
 map/map.i: map/map.cpp.i
@@ -238,7 +238,7 @@ map/map.i: map/map.cpp.i
 
 # target to preprocess a source file
 map/map.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/map/map.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/map/map.cpp.i
 .PHONY : map/map.cpp.i
 
 map/map.s: map/map.cpp.s
@@ -246,7 +246,7 @@ map/map.s: map/map.cpp.s
 
 # target to generate assembly for a file
 map/map.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/map/map.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/map/map.cpp.s
 .PHONY : map/map.cpp.s
 
 player/player.obj: player/player.cpp.obj
@@ -254,7 +254,7 @@ player/player.obj: player/player.cpp.obj
 
 # target to build an object file
 player/player.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/player/player.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/player/player.cpp.obj
 .PHONY : player/player.cpp.obj
 
 player/player.i: player/player.cpp.i
@@ -262,7 +262,7 @@ player/player.i: player/player.cpp.i
 
 # target to preprocess a source file
 player/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/player/player.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/player/player.cpp.i
 .PHONY : player/player.cpp.i
 
 player/player.s: player/player.cpp.s
@@ -270,7 +270,7 @@ player/player.s: player/player.cpp.s
 
 # target to generate assembly for a file
 player/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/player/player.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/player/player.cpp.s
 .PHONY : player/player.cpp.s
 
 sprite/sprite.obj: sprite/sprite.cpp.obj
@@ -278,7 +278,7 @@ sprite/sprite.obj: sprite/sprite.cpp.obj
 
 # target to build an object file
 sprite/sprite.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/sprite/sprite.cpp.obj
 .PHONY : sprite/sprite.cpp.obj
 
 sprite/sprite.i: sprite/sprite.cpp.i
@@ -286,7 +286,7 @@ sprite/sprite.i: sprite/sprite.cpp.i
 
 # target to preprocess a source file
 sprite/sprite.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/sprite/sprite.cpp.i
 .PHONY : sprite/sprite.cpp.i
 
 sprite/sprite.s: sprite/sprite.cpp.s
@@ -294,7 +294,7 @@ sprite/sprite.s: sprite/sprite.cpp.s
 
 # target to generate assembly for a file
 sprite/sprite.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-image.dir/build.make CMakeFiles/sdl2-image.dir/sprite/sprite.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ferrets_grape.dir/build.make CMakeFiles/ferrets_grape.dir/sprite/sprite.cpp.s
 .PHONY : sprite/sprite.cpp.s
 
 # Help Target
@@ -305,7 +305,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sdl2-image"
+	@echo "... ferrets_grape"
 	@echo "... block/block.obj"
 	@echo "... block/block.i"
 	@echo "... block/block.s"
