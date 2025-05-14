@@ -1,3 +1,5 @@
+// Zmiany w pliku main.cpp
+
 #include "block/block.h"
 #include "camera/camera.h"
 #include "level_manager/level_manager.h"
@@ -40,10 +42,14 @@ int main(int argc, char *argv[]) {
 
   Player player("player.png", window);
 
-  SDL_Texture *blockTexture = IMG_LoadTexture(renderer, "wall.png");
+  // Ładujemy dwie tekstury bloków
+  SDL_Texture *grassBlockTexture =
+      IMG_LoadTexture(renderer, "grass.png"); // Blok z trawą
+  SDL_Texture *plainBlockTexture =
+      IMG_LoadTexture(renderer, "wall.png"); // Blok bez trawy
   SDL_Texture *exitTexture = IMG_LoadTexture(renderer, "grass.png");
 
-  if (!blockTexture) {
+  if (!grassBlockTexture || !plainBlockTexture) {
     return -1;
   }
 
@@ -51,10 +57,12 @@ int main(int argc, char *argv[]) {
     return -1;
   }
 
-  Map map(renderer, blockTexture);
+  // Zmodyfikowany konstruktor Map
+  Map map(renderer, grassBlockTexture, plainBlockTexture);
   map.setExitTexture(exitTexture);
 
-  LevelManager levelManager(renderer, blockTexture);
+  // Zmiany w LevelManager również są potrzebne
+  LevelManager levelManager(renderer, grassBlockTexture, plainBlockTexture);
   levelManager.setExitTexture(exitTexture);
 
   if (!levelManager.initialize("maps/")) {
@@ -69,7 +77,8 @@ int main(int argc, char *argv[]) {
     return -1;
   }
 
-  SDL_DestroyTexture(blockTexture);
+  SDL_DestroyTexture(grassBlockTexture);
+  SDL_DestroyTexture(plainBlockTexture);
   if (exitTexture) {
     SDL_DestroyTexture(exitTexture);
   }
@@ -78,6 +87,7 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
+// Reszta kodu pozostaje bez zmian
 bool initSDL() {
   if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) < 0) {
     return false;

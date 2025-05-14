@@ -1,3 +1,5 @@
+// Plik map.h - dodajemy nowe pole dla tekstury bloku bez trawy
+
 #pragma once
 #include "../block/block.h"
 #include "../camera/camera.h"
@@ -5,7 +7,9 @@
 
 class Map {
 public:
-  Map(SDL_Renderer *renderer, SDL_Texture *blockTexture);
+  // Zmodyfikowany konstruktor przyjmujący dwie tekstury
+  Map(SDL_Renderer *renderer, SDL_Texture *grassBlockTexture,
+      SDL_Texture *plainBlockTexture);
 
   void loadFromFile(const char *filename);
   void render(SDL_Renderer *renderer, const Camera *camera = nullptr);
@@ -28,7 +32,8 @@ public:
 
 private:
   std::vector<Block> blocks;
-  SDL_Texture *texture;
+  SDL_Texture *grassBlockTexture; // Tekstura z trawą
+  SDL_Texture *plainBlockTexture; // Tekstura bez trawy
   SDL_Texture *exitTexture;
   SDL_Renderer *renderer;
 
@@ -43,4 +48,7 @@ private:
   // Wymiary świata gry
   int worldWidth = 0;
   int worldHeight = 0;
+
+  // Funkcja sprawdzająca, czy nad blokiem znajduje się inny blok
+  bool hasBlockAbove(int x, int y) const;
 };

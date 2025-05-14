@@ -1,8 +1,13 @@
+// Zmiany w pliku level_manager.cpp
+
 #include "level_manager.h"
 #include <fstream>
 
-LevelManager::LevelManager(SDL_Renderer *renderer, SDL_Texture *blockTexture)
-    : renderer(renderer), blockTexture(blockTexture), exitTexture(nullptr),
+LevelManager::LevelManager(SDL_Renderer *renderer,
+                           SDL_Texture *grassBlockTexture,
+                           SDL_Texture *plainBlockTexture)
+    : renderer(renderer), grassBlockTexture(grassBlockTexture),
+      plainBlockTexture(plainBlockTexture), exitTexture(nullptr),
       currentLevel(1), maxLevels(0), levelPath("maps/") {}
 
 LevelManager::~LevelManager() {}

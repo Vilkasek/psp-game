@@ -1,9 +1,13 @@
+// Plik map.cpp - implementacja zmodyfikowanej klasy Map
+
 #include "map.h"
 #include <algorithm>
 #include <fstream>
 
-Map::Map(SDL_Renderer *renderer, SDL_Texture *blockTexture)
-    : renderer(renderer), texture(blockTexture), exitTexture(nullptr),
+Map::Map(SDL_Renderer *renderer, SDL_Texture *grassBlockTexture,
+         SDL_Texture *plainBlockTexture)
+    : renderer(renderer), grassBlockTexture(grassBlockTexture),
+      plainBlockTexture(plainBlockTexture), exitTexture(nullptr),
       exitExists(false), worldWidth(0), worldHeight(0) {}
 
 void Map::setExitTexture(SDL_Texture *texture) { exitTexture = texture; }
@@ -12,6 +16,17 @@ float Map::getPlayerMapX() { return playerMapX; }
 float Map::getPlayerMapY() { return playerMapY; }
 
 const std::vector<Block> &Map::getBlocks() const { return blocks; }
+
+bool Map::hasBlockAbove(int x, int y) const {
+  // Sprawdź, czy istnieje blok na pozycji (x, y-1)
+  for (const auto &block : blocks) {
+    SDL_Rect rect = block.getRect();
+    if (rect.x == x && rect.y == y - tileSize) {
+      return true;
+    }
+  }
+  return false;
+}
 
 void Map::loadFromFile(const char *filename) {
   blocks.clear();
@@ -29,20 +44,37 @@ void Map::loadFromFile(const char *filename) {
   int row = 0;
   int maxCol = 0;
 
+  // Pierwsza pętla - wczytaj mapę do pamięci
+  std::vector<std::string> mapData;
   while (std::getline(file, line)) {
+    mapData.push_back(line);
     maxCol = std::max(maxCol, static_cast<int>(line.length()));
-    for (int col = 0; col < line.length(); ++col) {
-      if (line[col] == '#') {
-        blocks.emplace_back(col * tileSize, row * tileSize, renderer, texture);
-      } else if (line[col] == 'p') {
-        playerMapX = col * tileSize;
-        playerMapY = row * tileSize;
-      } else if (line[col] == 'E') {
+    row++;
+  }
+
+  // Druga pętla - analizuj mapę i twórz bloki
+  for (int y = 0; y < mapData.size(); y++) {
+    for (int x = 0; x < mapData[y].length(); x++) {
+      if (mapData[y][x] == '#') {
+        // Sprawdź, czy nad blokiem jest inny blok
+        bool hasAbove = false;
+        if (y > 0 && y < mapData.size() && x < mapData[y - 1].length()) {
+          hasAbove = mapData[y - 1][x] == '#';
+        }
+
+        // Wybierz odpowiednią teksturę
+        SDL_Texture *textureToUse =
+            hasAbove ? plainBlockTexture : grassBlockTexture;
+
+        blocks.emplace_back(x * tileSize, y * tileSize, renderer, textureToUse);
+      } else if (mapData[y][x] == 'p') {
+        playerMapX = x * tileSize;
+        playerMapY = y * tileSize;
+      } else if (mapData[y][x] == 'E') {
         exitExists = true;
-        exitRect = {col * tileSize, row * tileSize, tileSize, tileSize};
+        exitRect = {x * tileSize, y * tileSize, tileSize, tileSize};
       }
     }
-    row++;
   }
 
   // Ustaw wymiary świata gry na podstawie wczytanej mapy
@@ -69,12 +101,7 @@ void Map::render(SDL_Renderer *renderer, const Camera *camera) {
       // Renderuj tylko jeśli widoczny na ekranie
       if (screenRect.x + screenRect.w >= 0 && screenRect.x <= 480 &&
           screenRect.y + screenRect.h >= 0 && screenRect.y <= 272) {
-
-        // Debug pozycji bloku
-        // printf("Block: world(%d,%d) -> screen(%d,%d)\n",
-        //       blockRect.x, blockRect.y, screenRect.x, screenRect.y);
-
-        SDL_RenderCopy(renderer, texture, NULL, &screenRect);
+        block.render(renderer);
       }
     } else {
       block.render(renderer);

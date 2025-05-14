@@ -1,3 +1,5 @@
+// Zmiany w pliku level_manager.h
+
 #pragma once
 #include "../map/map.h"
 #include "../player/player.h"
@@ -6,7 +8,9 @@
 
 class LevelManager {
 public:
-  LevelManager(SDL_Renderer *renderer, SDL_Texture *blockTexture);
+  // Zmodyfikowany konstruktor przyjmujący dwie tekstury bloków
+  LevelManager(SDL_Renderer *renderer, SDL_Texture *grassBlockTexture,
+               SDL_Texture *plainBlockTexture);
   ~LevelManager();
 
   bool initialize(const std::string &levelDirPath);
@@ -25,7 +29,8 @@ public:
 
 private:
   SDL_Renderer *renderer;
-  SDL_Texture *blockTexture;
+  SDL_Texture *grassBlockTexture; // Tekstura bloku z trawą
+  SDL_Texture *plainBlockTexture; // Tekstura bloku bez trawy
   SDL_Texture *exitTexture;
 
   int currentLevel;
