@@ -1,5 +1,3 @@
-// Plik map.h - dodajemy nowe pole dla tekstury bloku bez trawy
-
 #pragma once
 #include "../block/block.h"
 #include "../camera/camera.h"

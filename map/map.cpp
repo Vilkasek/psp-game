@@ -1,5 +1,3 @@
-// Plik map.cpp - implementacja zmodyfikowanej klasy Map
-
 #include "map.h"
 #include <algorithm>
 #include <fstream>
@@ -87,38 +85,19 @@ void Map::loadFromFile(const char *filename) {
 }
 
 void Map::render(SDL_Renderer *renderer, const Camera *camera) {
+  // Render blocks with camera offset
   for (auto &block : blocks) {
-    SDL_Rect blockRect = block.getRect();
-    SDL_Rect screenRect;
-
-    if (camera) {
-      // Prostsze obliczenie pozycji ekranowej
-      screenRect.x = blockRect.x - static_cast<int>(camera->getOffsetX());
-      screenRect.y = blockRect.y - static_cast<int>(camera->getOffsetY());
-      screenRect.w = blockRect.w;
-      screenRect.h = blockRect.h;
-
-      // Renderuj tylko jeśli widoczny na ekranie
-      if (screenRect.x + screenRect.w >= 0 && screenRect.x <= 480 &&
-          screenRect.y + screenRect.h >= 0 && screenRect.y <= 272) {
-        block.render(renderer);
-      }
-    } else {
-      block.render(renderer);
-    }
+    // Let each block handle its own camera-aware rendering
+    block.render(renderer, camera);
   }
 
-  // Podobne uproszczenie dla wyjścia
+  // Render exit with camera offset
   if (exitExists) {
-    SDL_Rect exitScreenRect;
-
+    SDL_Rect exitScreenRect = exitRect;
+    
     if (camera) {
-      exitScreenRect.x = exitRect.x - static_cast<int>(camera->getOffsetX());
-      exitScreenRect.y = exitRect.y - static_cast<int>(camera->getOffsetY());
-      exitScreenRect.w = exitRect.w;
-      exitScreenRect.h = exitRect.h;
-    } else {
-      exitScreenRect = exitRect;
+      exitScreenRect.x -= static_cast<int>(camera->getOffsetX());
+      exitScreenRect.y -= static_cast<int>(camera->getOffsetY());
     }
 
     if (exitTexture) {
@@ -132,6 +111,7 @@ void Map::render(SDL_Renderer *renderer, const Camera *camera) {
     }
   }
 }
+
 bool Map::hasExit() const { return exitExists; }
 
 SDL_Rect Map::getExitRect() const { return exitRect; }

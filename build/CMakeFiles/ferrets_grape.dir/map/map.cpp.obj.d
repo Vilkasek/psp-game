@@ -2,7 +2,7 @@ CMakeFiles/ferrets_grape.dir/map/map.cpp.obj: \
  /home/vilkas/projekty/psp-game/map/map.cpp \
  /home/vilkas/projekty/psp-game/map/map.h \
  /home/vilkas/projekty/psp-game/map/../block/block.h \
- /home/vilkas/projekty/psp-game/map/../block/../sprite/sprite.h \
+ /home/vilkas/projekty/psp-game/map/../block/../camera/camera.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_main.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_stdinc.h \
@@ -149,6 +149,7 @@ CMakeFiles/ferrets_grape.dir/map/map.cpp.obj: \
  /usr/local/pspdev/psp/include/SDL2/SDL_version.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_locale.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_misc.h \
+ /home/vilkas/projekty/psp-game/map/../block/../sprite/sprite.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_image.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_render.h \
@@ -212,7 +213,6 @@ CMakeFiles/ferrets_grape.dir/map/map.cpp.obj: \
  /usr/local/pspdev/psp/include/c++/14.1.0/backward/auto_ptr.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/glue_memory_defs.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/pstl/execution_defs.h \
- /home/vilkas/projekty/psp-game/map/../camera/camera.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/vector \
  /usr/local/pspdev/psp/include/c++/14.1.0/bits/stl_vector.h \
  /usr/local/pspdev/psp/include/c++/14.1.0/initializer_list \

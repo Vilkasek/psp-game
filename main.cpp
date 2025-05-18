@@ -42,11 +42,10 @@ int main(int argc, char *argv[]) {
 
   Player player("player.png", window);
 
-  // Ładujemy dwie tekstury bloków
   SDL_Texture *grassBlockTexture =
-      IMG_LoadTexture(renderer, "grass.png"); // Blok z trawą
+      IMG_LoadTexture(renderer, "grassBlockTexture.png");
   SDL_Texture *plainBlockTexture =
-      IMG_LoadTexture(renderer, "wall.png"); // Blok bez trawy
+      IMG_LoadTexture(renderer, "plainBlockTexture.png");
   SDL_Texture *exitTexture = IMG_LoadTexture(renderer, "grass.png");
 
   if (!grassBlockTexture || !plainBlockTexture) {
@@ -182,7 +181,7 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
 
     // Move player with world boundaries
     player.move(gameController, deltaTime, map.getWorldWidth(),
-                map.getWorldHeight());
+                map.getWorldHeight() - 64);
 
     player.resetGroundState();
 
@@ -202,7 +201,7 @@ bool gameLoop(Player &player, Map &map, LevelManager &levelManager) {
         }
       }
       // Update camera bounds when changing levels
-      camera.setBounds(map.getWorldWidth(), map.getWorldHeight());
+      camera.setBounds(map.getWorldWidth(), map.getWorldHeight() - 32);
     }
 
     SDL_SetRenderDrawColor(renderer, 100, 100, 200, 255);

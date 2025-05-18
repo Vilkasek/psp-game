@@ -18,7 +18,7 @@ bool LevelManager::initialize(const std::string &levelDirPath) {
     levelPath += '/';
   }
 
-  maxLevels = 0;
+  maxLevels = 2;
   int level = 1;
   while (levelFileExists(level)) {
     maxLevels = level;

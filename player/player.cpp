@@ -127,6 +127,7 @@ void Player::updateTimers(float deltaTime) {
   }
 }
 
+// Modified Player::move() function with fixes for jumping
 void Player::move(SDL_GameController *controller, float deltaTime,
                   int worldWidth, int worldHeight) {
   updateTimers(deltaTime);
@@ -143,7 +144,7 @@ void Player::move(SDL_GameController *controller, float deltaTime,
     jump = SDL_GameControllerGetButton(controller, SDL_CONTROLLER_BUTTON_A);
   }
 
-  // Sprawdź klawiaturę
+  // Check keyboard
   const Uint8 *keyboardState = SDL_GetKeyboardState(NULL);
   if (keyboardState[SDL_SCANCODE_LEFT])
     left = true;
@@ -152,6 +153,7 @@ void Player::move(SDL_GameController *controller, float deltaTime,
   if (keyboardState[SDL_SCANCODE_SPACE] || keyboardState[SDL_SCANCODE_UP])
     jump = true;
 
+  // Horizontal movement
   if (left && !right) {
     velocityX -= acceleration * deltaTime;
     if (velocityX < -speed)
@@ -172,9 +174,13 @@ void Player::move(SDL_GameController *controller, float deltaTime,
     }
   }
 
+  // Apply gravity
   velocityY += gravity * deltaTime;
 
-  if (jump) {
+  // Jump handling - FIXED
+  static bool jumpKeyWasPressed = false;
+
+  if (jump && !jumpKeyWasPressed) { // Jump key was just pressed
     if (isOnGround || currentCoyoteTime > 0) {
       velocityY = jumpForce;
       isOnGround = false;
@@ -195,15 +201,20 @@ void Player::move(SDL_GameController *controller, float deltaTime,
     std::cout << "Buffered jump executed!" << std::endl;
   }
 
+  // Update jump key state
+  jumpKeyWasPressed = jump;
+
+  // Limit fall speed
   float maxFallSpeed = 500.0f;
   if (velocityY > maxFallSpeed) {
     velocityY = maxFallSpeed;
   }
 
+  // Apply velocity
   x += velocityX * deltaTime;
   y += velocityY * deltaTime;
 
-  // Sprawdzaj kolizje z granicami świata zamiast stałych wymiarów ekranu
+  // World boundaries
   if (x < 0) {
     x = 0;
     velocityX = 0;
@@ -218,7 +229,7 @@ void Player::move(SDL_GameController *controller, float deltaTime,
     isOnGround = true;
   }
 
-  // Aktualizacja kierunku gracza
+  // Update player direction
   updateDirection();
 
   sprite.setPosition(static_cast<int>(x), static_cast<int>(y));

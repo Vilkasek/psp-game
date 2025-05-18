@@ -3,6 +3,7 @@
 
 CMakeFiles/ferrets_grape.dir/block/block.cpp.obj
  /home/vilkas/projekty/psp-game/block/block.cpp
+ /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/block/block.h
  /usr/local/pspdev/lib/gcc/psp/14.1.0/include/float.h
@@ -372,9 +373,9 @@ CMakeFiles/ferrets_grape.dir/camera/camera.cpp.obj
 
 CMakeFiles/ferrets_grape.dir/level_manager/level_manager.cpp.obj
  /home/vilkas/projekty/psp-game/level_manager/level_manager.cpp
+ /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/block/block.h
- /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/map/map.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/player/player.h
@@ -638,9 +639,9 @@ CMakeFiles/ferrets_grape.dir/level_manager/level_manager.cpp.obj
 
 CMakeFiles/ferrets_grape.dir/main.cpp.obj
  /home/vilkas/projekty/psp-game/main.cpp
+ /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/block/block.h
- /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/map/map.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/player/player.h
@@ -878,9 +879,9 @@ CMakeFiles/ferrets_grape.dir/main.cpp.obj
 
 CMakeFiles/ferrets_grape.dir/map/map.cpp.obj
  /home/vilkas/projekty/psp-game/map/map.cpp
+ /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/block/block.h
- /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/map/map.h
  /usr/local/pspdev/lib/gcc/psp/14.1.0/include/float.h
  /usr/local/pspdev/lib/gcc/psp/14.1.0/include/limits.h
@@ -1147,9 +1148,9 @@ CMakeFiles/ferrets_grape.dir/map/map.cpp.obj
 
 CMakeFiles/ferrets_grape.dir/player/player.cpp.obj
  /home/vilkas/projekty/psp-game/player/player.cpp
+ /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/block/block.h
- /home/vilkas/projekty/psp-game/camera/camera.h
  /home/vilkas/projekty/psp-game/sprite/sprite.h
  /home/vilkas/projekty/psp-game/player/player.h
  /usr/local/pspdev/lib/gcc/psp/14.1.0/include/float.h

@@ -1,7 +1,7 @@
 CMakeFiles/ferrets_grape.dir/block/block.cpp.obj: \
  /home/vilkas/projekty/psp-game/block/block.cpp \
  /home/vilkas/projekty/psp-game/block/block.h \
- /home/vilkas/projekty/psp-game/block/../sprite/sprite.h \
+ /home/vilkas/projekty/psp-game/block/../camera/camera.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_main.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_stdinc.h \
@@ -148,6 +148,7 @@ CMakeFiles/ferrets_grape.dir/block/block.cpp.obj: \
  /usr/local/pspdev/psp/include/SDL2/SDL_version.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_locale.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_misc.h \
+ /home/vilkas/projekty/psp-game/block/../sprite/sprite.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_image.h \
  /usr/local/pspdev/psp/include/SDL2/SDL.h \
  /usr/local/pspdev/psp/include/SDL2/SDL_render.h \

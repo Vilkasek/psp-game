@@ -1,4 +1,5 @@
 #pragma once
+#include "../camera/camera.h"
 #include "../sprite/sprite.h"
 #include <SDL2/SDL.h>
 #include <memory>
@@ -9,7 +10,8 @@ public:
 
   Block(int x, int y, SDL_Renderer *renderer, SDL_Texture *texture);
 
-  void render(SDL_Renderer *renderer);
+  // Modified to accept camera for proper rendering
+  void render(SDL_Renderer *renderer, const Camera *camera = nullptr);
   SDL_Rect getRect() const;
 
 private:
